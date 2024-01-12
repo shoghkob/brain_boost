@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Brain Boost</string>
+    <string name="heading_one">Learn AI</string>
+    <string name="heading_two">Brain Storming!</string>
+    <string name="heading_three">Practice!</string>
+    <string name="desc_one">Explore the world of AI and learn the basics</string>
+    <string name="desc_two">Train your brain and discover new things</string>
+    <string name="desc_three">Practice everything you have learned and be proud of your knowledge</string>
+
+</resources>
