@@ -7,17 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.Objects;
 
 public class loginActivity extends AppCompatActivity {
 
@@ -39,11 +33,8 @@ public class loginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!validateUsername() | !validatePassword()) {
-
-                } else {
-                    checkUser();
-                }
+                    Intent intent = new Intent(loginActivity.this, onboarding.class);
+                    startActivity(intent);
             }
         });
 
@@ -84,32 +75,32 @@ public class loginActivity extends AppCompatActivity {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
         Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
 
-        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()) {
-                    loginUsername.setError(null);
-                    String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
-
-                    if(!Objects.equals(passwordFromDB, userPassword)) {
-                        loginUsername.setError(null);
-                        Intent intent = new Intent(loginActivity.this, onboarding.class);
-                        startActivity(intent);
-                    } else {
-                        loginPassword.setError("Invalid Credentials");
-                        loginPassword.requestFocus();
-                    }
-                } else {
-                    loginUsername.setError("User does not exist");
-                    loginUsername.requestFocus();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+//        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+////            @Override
+////            public void onDataChange(@NonNull DataSnapshot snapshot) {
+////                if(snapshot.exists()) {
+////                    loginUsername.setError(null);
+////                    String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
+////
+////                    if(!Objects.equals(passwordFromDB, userPassword)) {
+////                        loginUsername.setError(null);
+////                        Intent intent = new Intent(loginActivity.this, onboarding.class);
+////                        startActivity(intent);
+////                    } else {
+////                        loginPassword.setError("Invalid Credentials");
+////                        loginPassword.requestFocus();
+////                    }
+////                } else {
+////                    loginUsername.setError("User does not exist");
+////                    loginUsername.requestFocus();
+////                }
+////            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
 
     }
 }

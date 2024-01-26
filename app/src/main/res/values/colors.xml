@@ -5,7 +5,7 @@
     <color name="light_blue">#8BBDC0</color>
     <color name="purple1">#FFBB86FC</color>
     <color name="purple2">#FF6200EE</color>
-    <color name="purple3">#FF3700B3</color>
+    <color name="purple3">#1E0061</color>
     <color name="teal1">#FF03DAC5</color>
     <color name="teal2">#FF018786</color>
     <color name="lavender">#8692f7</color>
@@ -17,5 +17,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="grey">#808080</color>
 
+    <color name="night_mode">#612481</color>
+    <color name="notifications">#13B2C3</color>
+    <color name="private_account">#E6A326</color>
+    <color name="security">#D95F69</color>
 
 </resources>
