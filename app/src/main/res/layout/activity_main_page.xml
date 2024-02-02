@@ -1,171 +1,334 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F8F2"
     tools:context=".mainPage">
-    <LinearLayout
-        android:id="@+id/top_layout"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="10dp">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/menu" />
-
-        <ImageView
-            android:id="@+id/user_logo"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/user_logo"
-            android:layout_marginHorizontal="230dp"
-            />
-
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/text_layout"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:layout_below="@+id/top_layout"
-        android:layout_marginTop="50dp"
-        android:paddingLeft="15dp"
-        >
-        <TextView
-            android:id="@+id/welcome_text"
-            android:layout_width="210dp"
-            android:layout_height="match_parent"
-            android:text="Hey, Welcome to\nBrain Boost"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppins"
-            />
-
-        <ImageView
-            android:id="@+id/welcome_img"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/owl_hi" />
-    </LinearLayout>
-    <TextView
-        android:id="@+id/getStarted_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text_layout"
-        android:textColor="@color/teal2"
-        android:text="Our Lessons"
-        android:textSize="25sp"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="15dp"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins"
-        tools:ignore="HardcodedText" />
-
-    <HorizontalScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/getStarted_text">
-    <LinearLayout
-        android:id="@+id/courses_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        >
-
-        <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        app:cardElevation="20dp">
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-            <ImageView
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/banner1"
-                android:scaleType="fitXY" />
-            <TextView
+                android:layout_height="250dp"
+                android:background="@drawable/top_background">
+
+                <LinearLayout
+                    android:id="@+id/linlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <EditText
+                        android:id="@+id/editTextText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_background"
+                        android:drawableStart="@drawable/search_24px"
+                        android:drawablePadding="15dp"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="Search courses"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textStyle="bold" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:srcCompat="@drawable/notifications_24px" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="180dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/owl_hi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="52dp"
+                    android:text="Welcome to \n Brain Boost"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/poppins"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linlayout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Introduction to AI"
-                android:textSize="20dp"
-                android:textColor="#69c5df"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:textAlignment="center"
-                android:fontFamily="@font/poppins" />
+                android:layout_height="match_parent"
+                android:layout_margin="32dp"
+                android:background="@drawable/green_background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/green_background"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/game1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/game1" />
+
+                        <TextView
+                            android:id="@+id/game1Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Game1"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/green_background"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/game2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/game2" />
+
+                        <TextView
+                            android:id="@+id/game2Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Game2"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/green_background"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/game3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/game3" />
+
+                        <TextView
+                            android:id="@+id/game3Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Game3"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/green_background"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/game4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/game4" />
+
+                        <TextView
+                            android:id="@+id/game4Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Game4"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/green_background"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/game5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/game5" />
+
+                        <TextView
+                            android:id="@+id/game5Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Game5"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/green_background"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/game6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/game6" />
+
+                        <TextView
+                            android:id="@+id/game6Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Game6"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/green_background"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/game7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/game7" />
+
+                        <TextView
+                            android:id="@+id/game7Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Game7"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/green_background"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/game8" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Game8"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            app:cardElevation="20dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/banner2"
-                    android:scaleType="fitXY" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Neural Networks"
-                    android:textSize="20dp"
-                    android:textColor="#69c5df"
-                    android:textStyle="bold"
-                    android:padding="10dp"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/poppins" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            app:cardElevation="20dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/banner3"
-                    android:scaleType="fitXY" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Smart and Big Data"
-                    android:textSize="20dp"
-                    android:textColor="#69c5df"
-                    android:textStyle="bold"
-                    android:padding="10dp"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/poppins" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-
-    </LinearLayout>
-    </HorizontalScrollView>
-</RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
