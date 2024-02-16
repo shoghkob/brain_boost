@@ -13,6 +13,12 @@
         android:theme="@style/Theme.BrainBoost"
         tools:targetApi="31">
         <activity
+            android:name=".GamesPage"
+            android:exported="false" />
+        <activity
+            android:name=".FirstCourse"
+            android:exported="false" />
+        <activity
             android:name=".profilePage"
             android:exported="false" />
         <activity
