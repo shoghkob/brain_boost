@@ -12,6 +12,7 @@ public class mainPage extends AppCompatActivity {
     ImageView profile_icon;
     ImageView first_course;
     ImageView games;
+    ImageView game1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class mainPage extends AppCompatActivity {
         profile_icon = findViewById(R.id.profile);
         first_course = findViewById(R.id.first_course);
         games = findViewById(R.id.games);
+        game1 = findViewById(R.id.game1);
         profile_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +41,12 @@ public class mainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(mainPage.this, GamesPage.class));
+            }
+        });
+        game1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mainPage.this, AddPlayers.class));
             }
         });
     }

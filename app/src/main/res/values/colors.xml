@@ -21,5 +21,8 @@
     <color name="notifications">#13B2C3</color>
     <color name="private_account">#E6A326</color>
     <color name="security">#D95F69</color>
+    <color name="light_white">#A5A5A5</color>
+    <color name="tictac_color">#BE46FF</color>
+    <color name="purple_back">#9054FF</color>
 
 </resources>
