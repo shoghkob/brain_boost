@@ -34,8 +34,8 @@ public class TicTacToe extends AppCompatActivity {
         playerOneName = findViewById(R.id.playerOneName);
         playerTwoName = findViewById(R.id.playerTwoName);
 
-         playerOneLayout = findViewById(R.id.playerOneLayout);
-         playerTwoLayout = findViewById(R.id.playerTwoLayout);
+        playerOneLayout = findViewById(R.id.playerOneLayout);
+        playerTwoLayout = findViewById(R.id.playerTwoLayout);
 
         image1 = findViewById(R.id.image1);
         image2 = findViewById(R.id.image2);
@@ -143,12 +143,12 @@ public class TicTacToe extends AppCompatActivity {
             imageView.setImageResource(R.drawable.human);
 
             if(checkPlayerWin()){
-                WinDialog winDialog = new WinDialog(TicTacToe.this, playerOneName.getText().toString() + " has won the match", TicTacToe.this);
+                ResultDialog winDialog = new ResultDialog(TicTacToe.this, playerOneName.getText().toString() + " has won the match", TicTacToe.this);
                 winDialog.setCancelable(false);
                 winDialog.show();
             }
             else if(totalSelectedBoxes == 9) {
-                WinDialog winDialog = new WinDialog(TicTacToe.this,  "It is a draw!", TicTacToe.this);
+                ResultDialog winDialog = new ResultDialog(TicTacToe.this,  "It is a draw!", TicTacToe.this);
                 winDialog.setCancelable(false);
                 winDialog.show();
             }
@@ -160,12 +160,12 @@ public class TicTacToe extends AppCompatActivity {
         else {
             imageView.setImageResource(R.drawable.robot);
             if(checkPlayerWin()) {
-                WinDialog winDialog = new WinDialog(TicTacToe.this, playerTwoName.getText().toString() + " has won the match", TicTacToe.this);
+                ResultDialog winDialog = new ResultDialog(TicTacToe.this, playerTwoName.getText().toString() + " has won the match", TicTacToe.this);
                 winDialog.setCancelable(false);
                 winDialog.show();
             }
             else if(selectedBoxPosition == 9) {
-                WinDialog winDialog = new WinDialog(TicTacToe.this,  "It is a draw!", TicTacToe.this);
+                ResultDialog winDialog = new ResultDialog(TicTacToe.this,  "It is a draw!", TicTacToe.this);
                 winDialog.setCancelable(false);
                 winDialog.show();
             }
@@ -224,35 +224,4 @@ public class TicTacToe extends AppCompatActivity {
         image8.setImageResource(R.drawable.rounded_back);
         image9.setImageResource(R.drawable.rounded_back);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
