@@ -24,7 +24,7 @@ public class AddPlayers extends AppCompatActivity {
                 if (getPlayerOneName.isEmpty() || getPlayerTwoName.isEmpty()) {
                     Toast.makeText(AddPlayers.this, "Please enter player name", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(AddPlayers.this, MainActivity.class);
+                    Intent intent = new Intent(AddPlayers.this, TicTacToe.class);
                     intent.putExtra("playerOne", getPlayerOneName);
                     intent.putExtra("playerTwo", getPlayerTwoName);
                     startActivity(intent);

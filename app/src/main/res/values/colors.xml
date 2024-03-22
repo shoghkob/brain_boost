@@ -24,5 +24,6 @@
     <color name="light_white">#A5A5A5</color>
     <color name="tictac_color">#BE46FF</color>
     <color name="purple_back">#9054FF</color>
+    <color name="colorPurple">#332FA2</color>
 
 </resources>
