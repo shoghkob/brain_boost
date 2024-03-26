@@ -49,12 +49,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
                 android:text="Our Games"
                 android:textAlignment="center"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppins"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,18 +80,19 @@
                             android:id="@+id/game1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/game1" />
+                            android:src="@drawable/human_vs_robot" />
 
                         <TextView
                             android:id="@+id/game1Text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:text="Game1"
+                            android:fontFamily="@font/poppins"
+                            android:text="TicTacToe"
+                            android:layout_marginTop="12sp"
                             android:textAlignment="center"
                             android:textSize="12sp"
-                            android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -107,18 +108,19 @@
                             android:id="@+id/game2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/game2" />
+                            android:src="@drawable/guess_words_logo" />
 
                         <TextView
                             android:id="@+id/game2Text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:text="Game2"
+                            android:fontFamily="@font/poppins"
+                            android:layout_marginTop="12sp"
+                            android:text="Guess the words"
                             android:textAlignment="center"
                             android:textSize="12sp"
-                            android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -141,38 +143,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/poppins"
                             android:text="Game3"
                             android:textAlignment="center"
                             android:textSize="12sp"
-                            android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:layout_weight="0.25"
-                        android:background="@drawable/green_background"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/game4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/game4" />
-
-                        <TextView
-                            android:id="@+id/game4Text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:text="Game4"
-                            android:textAlignment="center"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
+                            android:textStyle="bold" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -292,8 +267,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
                 android:orientation="horizontal">
 
                 <TextView

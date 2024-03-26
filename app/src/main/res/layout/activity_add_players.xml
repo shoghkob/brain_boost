@@ -28,46 +28,42 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ENTER \n PLAYERS' NAMES"
+                android:text="TicTacToe\n HUMAN vs AI"
+                android:fontFamily="@font/poppins"
                 android:textAlignment="center"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 android:textColor="@color/lavender"/>
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/playerOne"
-                android:background="@drawable/lavander_border"
-                android:layout_marginTop="40dp"
-                android:padding="8dp"
-                android:maxLines="1"
-                android:textStyle="italic"
-                android:hint="Enter player one name"
-                android:textColor="@color/lavender"
-                android:drawableLeft="@drawable/icon_human"
-                android:drawablePadding="8dp"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Ready to test your strength and compete with AI?"
+                android:textAlignment="center"
+                android:layout_marginTop="10sp"
+                android:textSize="25sp"
+                android:textColor="#8B93FF"/>
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/playerTwo"
-                android:background="@drawable/lavander_border"
-                android:layout_marginTop="20dp"
-                android:padding="8dp"
-                android:maxLines="1"
-                android:textStyle="italic"
-                android:hint="Enter player two name"
-                android:textColor="@color/lavender"
-                android:drawableLeft="@drawable/icon_robot"
-                android:drawablePadding="8dp"/>
+                android:layout_height="wrap_content"
+                android:text="I'm sure you can win!"
+                android:fontFamily="@font/poppins"
+                android:textAlignment="center"
+                android:layout_marginTop="10sp"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#5755FE"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10sp"
                 android:id="@+id/startGameButton"
                 android:text="Start Game"
+                android:fontFamily="@font/poppins"
+                android:textStyle="bold"
                 android:textSize="18sp"
                 app:cornerRadius = "20dp"/>
 

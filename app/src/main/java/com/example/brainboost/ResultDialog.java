@@ -2,6 +2,7 @@ package com.example.brainboost;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,7 @@ public class ResultDialog extends Dialog {
 
         TextView messageText = findViewById(R.id.messageText);
         Button startAgainButton = findViewById(R.id.startAgainButton);
+        Button goBackBtn = findViewById(R.id.go_back);
 
         messageText.setText(message);
 
@@ -35,6 +37,14 @@ public class ResultDialog extends Dialog {
             public void onClick(View v) {
                 ticTacToe.restartMatch();
                 dismiss();
+            }
+        });
+
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+                getContext().startActivity(new Intent(getContext(), mainPage.class));
             }
         });
     }

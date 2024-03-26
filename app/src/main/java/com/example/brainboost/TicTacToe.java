@@ -10,43 +10,41 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class TicTacToe extends AppCompatActivity {
 
     private final List<int[]> combinationsList = new ArrayList<>();
 
-    private int [] boxPositions = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private int[] boxPositions = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-    private int playerTurn = 1;
+    private int currentPlayer = 1;
 
-    private int totalSelectedBoxes = 1;
+    private int totalSelectedBoxes = 0;
 
     private LinearLayout playerOneLayout, playerTwoLayout;
-    private TextView playerOneName, playerTwoName;
-    private ImageView image1, image2, image3, image4, image5, image6, image7, image8, image9;
-
+    private TextView playerNameTextView;
+    private ImageView[] boxes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tic_tac_toe);
 
-        playerOneName = findViewById(R.id.playerOneName);
-        playerTwoName = findViewById(R.id.playerTwoName);
-
+        playerNameTextView = findViewById(R.id.playerOneName);
         playerOneLayout = findViewById(R.id.playerOneLayout);
         playerTwoLayout = findViewById(R.id.playerTwoLayout);
 
-        image1 = findViewById(R.id.image1);
-        image2 = findViewById(R.id.image2);
-        image3 = findViewById(R.id.image3);
-        image4 = findViewById(R.id.image4);
-        image5 = findViewById(R.id.image5);
-        image6 = findViewById(R.id.image6);
-        image7 = findViewById(R.id.image7);
-        image8 = findViewById(R.id.image8);
-        image9 = findViewById(R.id.image9);
-
+        boxes = new ImageView[9];
+        boxes[0] = findViewById(R.id.image1);
+        boxes[1] = findViewById(R.id.image2);
+        boxes[2] = findViewById(R.id.image3);
+        boxes[3] = findViewById(R.id.image4);
+        boxes[4] = findViewById(R.id.image5);
+        boxes[5] = findViewById(R.id.image6);
+        boxes[6] = findViewById(R.id.image7);
+        boxes[7] = findViewById(R.id.image8);
+        boxes[8] = findViewById(R.id.image9);
 
         combinationsList.add(new int[]{0, 1, 2});
         combinationsList.add(new int[]{3, 4, 5});
@@ -54,174 +52,132 @@ public class TicTacToe extends AppCompatActivity {
         combinationsList.add(new int[]{0, 3, 6});
         combinationsList.add(new int[]{1, 4, 7});
         combinationsList.add(new int[]{2, 5, 8});
-        combinationsList.add(new int[]{2, 4, 6});
         combinationsList.add(new int[]{0, 4, 8});
+        combinationsList.add(new int[]{2, 4, 6});
 
-        final String getPlayerOneName = getIntent().getStringExtra("playerOne");
-        final String getPlayerTwoName = getIntent().getStringExtra("playerTwo");
+        playerNameTextView.setText("Your Name");
 
-        playerOneName.setText(getPlayerOneName);
-        playerTwoName.setText(getPlayerTwoName);
-
-        image1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isBoxSelectable(0)){
-                    performAction((ImageView)v,0);
+        for (int i = 0; i < 9; i++) {
+            final int position = i;
+            boxes[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (boxPositions[position] == 0) {
+                        boxPositions[position] = currentPlayer;
+                        totalSelectedBoxes++;
+                        updateUI(position);
+                        if (checkWin(currentPlayer)) {
+                            showResult("You win!");
+                        } else if (totalSelectedBoxes == 9) {
+                            showResult("It's a draw!");
+                        } else {
+                            currentPlayer = 2;
+                            playerNameTextView.setText("AI");
+                            makeAiMove();
+                        }
+                    }
                 }
-            }
-        });
-        image2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isBoxSelectable(1)){
-                    performAction((ImageView)v,1);
-                }
-            }
-        });
-        image3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isBoxSelectable(2)){
-                    performAction((ImageView)v,2);
-                }
-            }
-        });
-        image4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isBoxSelectable(3)){
-                    performAction((ImageView)v,3);
-                }
-            }
-        });
-        image5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isBoxSelectable(4)){
-                    performAction((ImageView)v,4);
-                }
-            }
-        });
-        image6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isBoxSelectable(5)){
-                    performAction((ImageView)v,5);
-                }
-            }
-        });
-        image7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isBoxSelectable(6)){
-                    performAction((ImageView)v,6);
-                }
-            }
-        });
-        image8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isBoxSelectable(7)){
-                    performAction((ImageView)v,7);
-                }
-            }
-        });
-        image9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isBoxSelectable(8)){
-                    performAction((ImageView)v,8);
-                }
-            }
-        });
-    }
-
-    private void performAction(ImageView imageView, int selectedBoxPosition) {
-        boxPositions[selectedBoxPosition] = playerTurn;
-        if(playerTurn == 1) {
-            imageView.setImageResource(R.drawable.human);
-
-            if(checkPlayerWin()){
-                ResultDialog winDialog = new ResultDialog(TicTacToe.this, playerOneName.getText().toString() + " has won the match", TicTacToe.this);
-                winDialog.setCancelable(false);
-                winDialog.show();
-            }
-            else if(totalSelectedBoxes == 9) {
-                ResultDialog winDialog = new ResultDialog(TicTacToe.this,  "It is a draw!", TicTacToe.this);
-                winDialog.setCancelable(false);
-                winDialog.show();
-            }
-            else {
-                changePlayerTurn(2);
-                totalSelectedBoxes++;
-            }
-        }
-        else {
-            imageView.setImageResource(R.drawable.robot);
-            if(checkPlayerWin()) {
-                ResultDialog winDialog = new ResultDialog(TicTacToe.this, playerTwoName.getText().toString() + " has won the match", TicTacToe.this);
-                winDialog.setCancelable(false);
-                winDialog.show();
-            }
-            else if(selectedBoxPosition == 9) {
-                ResultDialog winDialog = new ResultDialog(TicTacToe.this,  "It is a draw!", TicTacToe.this);
-                winDialog.setCancelable(false);
-                winDialog.show();
-            }
-            else {
-                changePlayerTurn(1);
-                totalSelectedBoxes++;
-            }
+            });
         }
     }
 
-    private void changePlayerTurn(int currentPlayerTurn){
-        playerTurn = currentPlayerTurn;
-
-        if(playerTurn == 1){
-            playerOneLayout.setBackgroundResource(R.drawable.lavander_border);
-            playerTwoLayout.setBackgroundResource(R.drawable.round_back_purple);
-        }
-        else {
-            playerTwoLayout.setBackgroundResource(R.drawable.lavander_border);
-            playerOneLayout.setBackgroundResource(R.drawable.round_back_purple);
-        }
-    }
-
-    private boolean checkPlayerWin() {
-        boolean response = false;
-
-        for(int i = 0; i < combinationsList.size(); i++) {
-            final int [] combination = combinationsList.get(i);
-            if(boxPositions[combination[0]] == playerTurn && boxPositions[combination[1]] == playerTurn && boxPositions[combination[2]] == playerTurn) {
-                response = true;
+    private void makeAiMove() {
+        int aiMove;
+        int winningMove = findWinningMove();
+        if (winningMove != -1) {
+            aiMove = winningMove;
+        } else {
+            int blockingMove = findBlockingMove();
+            if (blockingMove != -1) {
+                aiMove = blockingMove;
+            } else {
+                Random random = new Random();
+                do {
+                    aiMove = random.nextInt(9);
+                } while (boxPositions[aiMove] != 0);
             }
         }
-        return response;
-    }
-    private boolean isBoxSelectable(int boxPosition) {
-        boolean response = false;
-
-        if(boxPositions[boxPosition] == 0) {
-            response = true;
+        boxPositions[aiMove] = 2;
+        totalSelectedBoxes++;
+        updateUI(aiMove);
+        if (checkWin(2)) {
+            showResult("AI wins!");
+        } else if (totalSelectedBoxes == 9) {
+            showResult("It's a draw!");
+        } else {
+            currentPlayer = 1;
+            playerNameTextView.setText("Your Name");
         }
-        return response;
     }
 
-    void restartMatch(){
+    private int findWinningMove() {
+        for (int[] combination : combinationsList) {
+            int count = 0;
+            int emptyPosition = -1;
+            for (int position : combination) {
+                if (boxPositions[position] == 2) {
+                    count++;
+                } else if (boxPositions[position] == 0) {
+                    emptyPosition = position;
+                }
+            }
+            if (count == 2 && emptyPosition != -1) {
+                return emptyPosition;
+            }
+        }
+        return -1;
+    }
+
+    private int findBlockingMove() {
+        for (int[] combination : combinationsList) {
+            int count = 0;
+            int emptyPosition = -1;
+            for (int position : combination) {
+                if (boxPositions[position] == 1) {
+                    count++;
+                } else if (boxPositions[position] == 0) {
+                    emptyPosition = position;
+                }
+            }
+            if (count == 2 && emptyPosition != -1) {
+                return emptyPosition;
+            }
+        }
+        return -1;
+    }
+
+    private void updateUI(int position) {
+        if (boxPositions[position] == 1) {
+            boxes[position].setImageResource(R.drawable.human);
+        } else {
+            boxes[position].setImageResource(R.drawable.robot);
+        }
+    }
+
+    private boolean checkWin(int player) {
+        for (int[] combination : combinationsList) {
+            if (boxPositions[combination[0]] == player && boxPositions[combination[1]] == player && boxPositions[combination[2]] == player) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void showResult(String message) {
+        ResultDialog resultDialog = new ResultDialog(TicTacToe.this, message, TicTacToe.this);
+        resultDialog.setCancelable(false);
+        resultDialog.show();
+    }
+
+    void restartMatch() {
         boxPositions = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0};
-        playerTurn = 1;
-        totalSelectedBoxes = 1;
+        currentPlayer = 1;
+        totalSelectedBoxes = 0;
 
-        image1.setImageResource(R.drawable.rounded_back);
-        image2.setImageResource(R.drawable.rounded_back);
-        image3.setImageResource(R.drawable.rounded_back);
-        image4.setImageResource(R.drawable.rounded_back);
-        image5.setImageResource(R.drawable.rounded_back);
-        image6.setImageResource(R.drawable.rounded_back);
-        image7.setImageResource(R.drawable.rounded_back);
-        image8.setImageResource(R.drawable.rounded_back);
-        image9.setImageResource(R.drawable.rounded_back);
+        for (ImageView box : boxes) {
+            box.setImageResource(R.drawable.rounded_back);
+        }
+
+        playerNameTextView.setText("Your Name");
     }
 }

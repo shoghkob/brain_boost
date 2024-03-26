@@ -38,6 +38,19 @@
             android:textColor="@color/lavender"
             app:cornerRadius = "20dp"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/go_back"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/white"
+            android:text="Return main page"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/lavender"
+            app:cornerRadius="20dp"/>
     </LinearLayout>
 
 </RelativeLayout>
