@@ -144,7 +144,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
                             android:fontFamily="@font/poppins"
-                            android:text="Game3"
+                            android:layout_marginTop="12sp"
+                            android:text="Puzzle"
                             android:textAlignment="center"
                             android:textSize="12sp"
                             android:textStyle="bold" />

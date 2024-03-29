@@ -8,4 +8,14 @@
     <string name="desc_three">Practice everything you have learned and be proud of your knowledge</string>
 
     <string name="game1_desc">TicTacToe - Human VS Robot. A game that is known among all people. But this TicTacToe is a little bit different.</string>
+    <string name="level1_answer1">SCOPE</string>
+    <string name="level1_answer2">PROCEDURE</string>
+    <string name="level1_answer3">CHATBOTS</string>
+    <string name="level1_answer4">NAVIGATION</string>
+    <string name="level1_answer5">NETWORKS</string>
+    <string name="level1_answer6">MODEL</string>
+    <string name="level1_answer7">PYTHON</string>
+    <string name="level1_answer8">ALGORITHMS</string>
+    <string name="level1_answer9">EVALUATION</string>
+    <string name="level1_answer10">BIAS</string>
 </resources>

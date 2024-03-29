@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="5dp"
-            android:text="This device in the future will be used by Amazon and Walmart for delivery programs."
+            android:text="Here will be a question"
             android:textAlignment="center"
             android:textColor="#332FA2"
             android:textSize="26sp"
@@ -43,7 +43,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="70dp"
@@ -54,7 +54,8 @@
         android:gravity="center"
         android:padding="10dp"
         android:textColor="#332FA2"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textTitle"
