@@ -115,13 +115,15 @@ public class QuizGame extends AppCompatActivity {
 
 
     private void setupQuestion(String answer) {
-        String[] keys_first_line = answer.substring(0, 5).split("");
-        String[] keys_second_line = answer.substring(5).split("");
+        int firstLineLength = (int) Math.ceil(answer.length() / 2.0);
+
+        String keys_first_line = answer.substring(0, firstLineLength);
+        String keys_second_line = answer.substring(firstLineLength);
 
         int extraLettersCount = 10 - answer.length();
         List<String> allLetters = new ArrayList<>();
-        Collections.addAll(allLetters, keys_first_line);
-        Collections.addAll(allLetters, keys_second_line);
+        Collections.addAll(allLetters, keys_first_line.split(""));
+        Collections.addAll(allLetters, keys_second_line.split(""));
 
         List<String> allPossibleLetters = new ArrayList<>();
         Collections.addAll(allPossibleLetters, "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
@@ -131,8 +133,8 @@ public class QuizGame extends AppCompatActivity {
         List<String> extraLetters = allPossibleLetters.subList(0, extraLettersCount);
 
         List<String> allKeys = new ArrayList<>();
-        Collections.addAll(allKeys, keys_first_line);
-        Collections.addAll(allKeys, keys_second_line);
+        Collections.addAll(allKeys, keys_first_line.split(""));
+        Collections.addAll(allKeys, keys_second_line.split(""));
         allKeys.addAll(extraLetters);
 
         Collections.shuffle(allKeys);

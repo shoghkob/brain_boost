@@ -27,6 +27,7 @@ public class mainPage extends AppCompatActivity {
         game1 = findViewById(R.id.game1);
         game2 = findViewById(R.id.game2);
         ImageView game3 = findViewById(R.id.game3);
+        ImageView courseIcon = findViewById(R.id.course);
         profile_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +58,13 @@ public class mainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(mainPage.this, QuizGameStartPage.class));
+            }
+        });
+
+        courseIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mainPage.this, CoursePage.class));
             }
         });
 

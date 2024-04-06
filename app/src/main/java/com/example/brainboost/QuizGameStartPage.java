@@ -19,6 +19,7 @@ public class QuizGameStartPage extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_game_start_page);
 
         LinearLayout level1 = findViewById(R.id.level1_layout);
+        LinearLayout level2 = findViewById(R.id.level2_layout);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView backArrow = (ImageView) findViewById(R.id.back_arrow);
 
         backArrow.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +32,12 @@ public class QuizGameStartPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(QuizGameStartPage.this, QuizGame.class));
+            }
+        });
+        level2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(QuizGameStartPage.this, BossLevel.class));
             }
         });
     }

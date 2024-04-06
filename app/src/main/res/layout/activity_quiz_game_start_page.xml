@@ -11,17 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
-        <ImageView
-            android:id="@+id/back_arrow"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="10dp"
-            android:src="@drawable/arrow_back_24px"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="43dp" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -31,6 +20,7 @@
             android:paddingTop="25sp"
             android:text="Guess the words"
             android:textAlignment="center"
+            android:gravity="center"
             android:textColor="#fff"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -44,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="40dp"
             android:text="Have fun!"
             android:textAlignment="center"
             android:textColor="#fff"
@@ -54,6 +44,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/arrow_back_24px"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="43dp" />
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
@@ -61,6 +61,7 @@
             android:orientation="horizontal"
             android:padding="10dp"
             android:layout_marginTop="30dp"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,6 +106,7 @@
                 app:cardCornerRadius="20dp">
 
                 <LinearLayout
+                    android:id="@+id/level2_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
@@ -137,6 +139,7 @@
             android:layout_height="175dp"
             android:orientation="horizontal"
             android:padding="10dp"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -212,6 +215,7 @@
             android:layout_height="175dp"
             android:orientation="horizontal"
             android:padding="10dp"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

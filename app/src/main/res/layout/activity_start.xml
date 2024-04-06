@@ -14,7 +14,7 @@
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:paddingTop="270dp"
+        android:paddingTop="350dp"
         >
 
         <Button
