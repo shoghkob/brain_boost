@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/transparent"
     tools:context=".mainPage">
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:scrollbars="none"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -39,8 +42,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
-                    android:padding="25dp"
-                    android:text="Hey,Welcome to \nBrain Boost"
+                    android:padding="30dp"
+                    android:text="Hey   'name' \nWelcome to Brain Boost"
                     android:textColor="@color/white"
                     android:textSize="25dp"
                     tools:ignore="MissingConstraints" />
@@ -296,24 +299,28 @@
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="250dp"
-                        android:layout_height="142dp"
+                        android:layout_height="138dp"
                         android:layout_marginLeft="20dp"
-                        app:cardCornerRadius="20dp">
+                        app:cardCornerRadius="20dp"
+                        >
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:background="@color/lavender"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/first_course"
@@ -326,6 +333,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppins"
+                                android:textColor="@color/white"
                                 android:text="Introduction to AI"
                                 android:textSize="20sp" />
 
@@ -335,7 +343,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="250dp"
-                        android:layout_height="142dp"
+                        android:layout_height="138dp"
                         android:layout_marginLeft="20dp"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp">
@@ -344,7 +352,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:background="@color/purple1"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:layout_width="230dp"
@@ -355,6 +365,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/white"
                                 android:text="Neural Network"
                                 android:textSize="20sp" />
 
@@ -364,7 +375,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="250dp"
-                        android:layout_height="142dp"
+                        android:layout_height="138dp"
                         android:layout_marginLeft="20dp"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp">
@@ -373,7 +384,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:background="@color/purple_back"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:layout_width="230dp"
@@ -385,6 +398,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Module 3"
+                                android:textColor="@color/white"
                                 android:textSize="20sp" />
 
                         </LinearLayout>
@@ -393,7 +407,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="250dp"
-                        android:layout_height="142dp"
+                        android:layout_height="138dp"
                         android:layout_marginLeft="20dp"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp">
@@ -402,6 +416,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
+                            android:background="#836FFF"
                             android:orientation="vertical">
 
                             <ImageView
@@ -414,6 +429,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Module 4"
+                                android:textColor="@color/white"
                                 android:textSize="20sp" />
 
                         </LinearLayout>
