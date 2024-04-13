@@ -31,13 +31,13 @@
 
             <!-- CardView 1 -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="400dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="@color/lavender">
@@ -54,8 +54,9 @@
 
                     <ImageView
                         android:id="@+id/module1"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/banner1" />
 
                     <TextView
@@ -74,14 +75,14 @@
 
             <!-- CardView 2 -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="400dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="@color/purple1">
@@ -97,8 +98,9 @@
                         android:padding="8dp"/>
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/banner2" />
 
                     <TextView
@@ -116,7 +118,7 @@
 
             <!-- CardView 2 -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
@@ -140,8 +142,9 @@
                         android:padding="8dp"/>
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/banner3" />
 
                     <TextView
