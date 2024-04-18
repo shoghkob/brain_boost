@@ -61,6 +61,13 @@ public class mainPage extends AppCompatActivity {
             }
         });
 
+        game3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mainPage.this, PuzzleGameImage.class));
+            }
+        });
+
         courseIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

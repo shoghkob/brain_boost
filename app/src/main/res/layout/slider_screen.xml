@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    app:flow_horizontalAlign="center">
+    app:flow_horizontalAlign="center"
+    >
 
     <ImageView
         android:id="@+id/sliderImage"
         android:layout_width="350dp"
         android:layout_height="300dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="130dp"
         android:scaleType="centerCrop"
         android:layout_gravity="center"
         android:src="@drawable/first_img"/>

@@ -33,10 +33,8 @@ public class GamesPage extends AppCompatActivity {
                 .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GamesPage.this, AddPlayers.class));
+                startActivity(new Intent(GamesPage.this, PuzzleGameImage.class));
             }
         });
     }
-
-
 }
