@@ -182,7 +182,7 @@
                         android:layout_width="230dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/game3" />
+                        android:src="@drawable/puzzle_logo" />
 
                     <TextView
                         android:layout_width="wrap_content"
