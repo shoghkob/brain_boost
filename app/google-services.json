@@ -1,33 +1,13 @@
 {
   "project_info": {
-    "project_number": "599913617483",
-    "firebase_url": "https://ai-project-95ae6-default-rtdb.firebaseio.com",
-    "project_id": "ai-project-95ae6",
-    "storage_bucket": "ai-project-95ae6.appspot.com"
+    "project_number": "875608445334",
+    "project_id": "brain-boost-c3e8d",
+    "storage_bucket": "brain-boost-c3e8d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:599913617483:android:e7574414c08b3722ea95ce",
-        "android_client_info": {
-          "package_name": "com.example.ai_project"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAbzeyNSbWYgiwQrGIU5MJO2kcOx-OT8IM"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:599913617483:android:65ecd7a13b1c6981ea95ce",
+        "mobilesdk_app_id": "1:875608445334:android:a1fc87472c9d59c16f8db7",
         "android_client_info": {
           "package_name": "com.example.brainboost"
         }
@@ -35,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAbzeyNSbWYgiwQrGIU5MJO2kcOx-OT8IM"
+          "current_key": "AIzaSyArF7NFrl82hmyUqj_9iZ2INt16PWDf2wo"
         }
       ],
       "services": {

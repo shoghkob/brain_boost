@@ -1,6 +1,6 @@
 package com.example.brainboost;
 
-public class helperClass {
+public class HelperClass {
     String name, email, username, password;
 
     public String getName() {
@@ -35,13 +35,13 @@ public class helperClass {
         this.password = password;
     }
 
-    public helperClass(String name, String email, String username, String password) {
+    public HelperClass(String name, String email, String username, String password) {
         this.name = name;
         this.email = email;
         this.username = username;
         this.password = password;
     }
 
-    public helperClass() {
+    public HelperClass() {
     }
 }
