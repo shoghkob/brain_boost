@@ -1,8 +1,20 @@
 package com.example.brainboost;
 
 public class HelperClass {
-    String name, email, username, password;
+    private String name;
+    private String email;
+    private String username;
+    private String password;
 
+    // Constructor
+    public HelperClass(String name, String email, String username, String password) {
+        this.name = name;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+    }
+
+    // Getters and setters (You can generate them automatically in Android Studio)
     public String getName() {
         return name;
     }
@@ -33,15 +45,5 @@ public class HelperClass {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public HelperClass(String name, String email, String username, String password) {
-        this.name = name;
-        this.email = email;
-        this.username = username;
-        this.password = password;
-    }
-
-    public HelperClass() {
     }
 }

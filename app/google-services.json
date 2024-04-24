@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "875608445334",
-    "project_id": "brain-boost-c3e8d",
-    "storage_bucket": "brain-boost-c3e8d.appspot.com"
+    "project_number": "218095079770",
+    "project_id": "brain-boost-948c7",
+    "storage_bucket": "brain-boost-948c7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:875608445334:android:a1fc87472c9d59c16f8db7",
+        "mobilesdk_app_id": "1:218095079770:android:2e379e953e716276812363",
         "android_client_info": {
           "package_name": "com.example.brainboost"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyArF7NFrl82hmyUqj_9iZ2INt16PWDf2wo"
+          "current_key": "AIzaSyBIRb00svLTDa3Ph505kxXqJ4e7ZQMSsMw"
         }
       ],
       "services": {
