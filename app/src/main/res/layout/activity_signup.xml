@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signupActivity"
+    tools:context=".SignupActivity"
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/loginback"
@@ -59,18 +59,6 @@
                 android:textSize="15dp" />
 
             <EditText
-                android:id="@+id/username"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/lavander_border"
-                android:drawableLeft="@drawable/baseline_person_pin_24"
-                android:drawablePadding="8dp"
-                android:hint="Username"
-                android:padding="8dp"
-                android:textSize="15dp" />
-
-            <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -79,6 +67,19 @@
                 android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
                 android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavander_border"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:hint="Confirm password"
                 android:inputType="textPassword"
                 android:padding="8dp"
                 android:textSize="15dp" />

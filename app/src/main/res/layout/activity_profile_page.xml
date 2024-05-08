@@ -408,6 +408,7 @@
 
                 <!--Logout-->
                 <RelativeLayout
+                    android:id="@+id/logout_layout"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -421,6 +422,7 @@
                         android:padding="12dp" />
 
                     <TextView
+                        android:id="@+id/logout_text"
                         android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

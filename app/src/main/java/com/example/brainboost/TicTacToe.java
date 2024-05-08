@@ -1,6 +1,8 @@
 package com.example.brainboost;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -26,6 +28,7 @@ public class TicTacToe extends AppCompatActivity {
     private TextView playerNameTextView;
     private ImageView[] boxes;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,10 @@ public class TicTacToe extends AppCompatActivity {
         playerNameTextView = findViewById(R.id.playerOneName);
         playerOneLayout = findViewById(R.id.playerOneLayout);
         playerTwoLayout = findViewById(R.id.playerTwoLayout);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String userName = preferences.getString("userName", "");
+        playerNameTextView.setText(userName);
 
         boxes = new ImageView[9];
         boxes[0] = findViewById(R.id.image1);
@@ -55,8 +62,6 @@ public class TicTacToe extends AppCompatActivity {
         combinationsList.add(new int[]{0, 4, 8});
         combinationsList.add(new int[]{2, 4, 6});
 
-        playerNameTextView.setText("Your Name");
-
         for (int i = 0; i < 9; i++) {
             final int position = i;
             boxes[i].setOnClickListener(new View.OnClickListener() {
@@ -72,7 +77,7 @@ public class TicTacToe extends AppCompatActivity {
                             showResult("It's a draw!");
                         } else {
                             currentPlayer = 2;
-                            playerNameTextView.setText("AI");
+                            playerNameTextView.setText("Robot");
                             makeAiMove();
                         }
                     }
@@ -106,7 +111,9 @@ public class TicTacToe extends AppCompatActivity {
             showResult("It's a draw!");
         } else {
             currentPlayer = 1;
-            playerNameTextView.setText("Your Name");
+            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+            String name = sharedPreferences.getString("username", "Your Name");
+            playerNameTextView.setText(name);
         }
     }
 
@@ -175,9 +182,11 @@ public class TicTacToe extends AppCompatActivity {
         totalSelectedBoxes = 0;
 
         for (ImageView box : boxes) {
-            box.setImageResource(R.drawable.rounded_back);
+            box.setImageResource(R.drawable.white_box);
         }
 
-        playerNameTextView.setText("Your Name");
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        String name = sharedPreferences.getString("username", "Your Name");
+        playerNameTextView.setText(name);
     }
 }
