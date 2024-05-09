@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -23,6 +24,8 @@ public class signupActivity extends AppCompatActivity {
     Button signupButton;
     FirebaseAuth mAuth;
 
+    TextView loginText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,7 @@ public class signupActivity extends AppCompatActivity {
         signupPassword = findViewById(R.id.password);
         signupConfirmPassword = findViewById(R.id.confirmPassword);
         signupButton = findViewById(R.id.signup_btn);
+        loginText = findViewById(R.id.loginText);
 
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +82,15 @@ public class signupActivity extends AppCompatActivity {
                         });
             }
         });
+
+        loginText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(signupActivity.this, loginActivity.class));
+            }
+        });
     }
+
 
     private void sendEmailVerification(final String name, final String email) {
         mAuth.getCurrentUser().sendEmailVerification()

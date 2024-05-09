@@ -14,46 +14,36 @@
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingLeft="20sp"
-            android:paddingTop="25sp"
+            android:background="@drawable/bg_1"
+            android:paddingTop="75sp"
             android:text="Games"
-            android:textSize="30sp"
-            app:fontFamily="@font/poppins"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Enjoy your learning!"
-            android:textSize="15dp"
+            android:textAlignment="center"
+            android:textColor="#F6F5F2"
+            android:textSize="40sp"
             android:textStyle="bold"
             app:fontFamily="@font/poppins"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            tools:ignore="MissingConstraints" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="160dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="30dp"
+            android:paddingTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView"
-            app:srcCompat="@drawable/game"
-            tools:ignore="MissingConstraints" />
+            app:srcCompat="@drawable/game_img"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="175dp"
             android:orientation="horizontal"
+            android:layout_marginTop="44dp"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -69,7 +59,7 @@
                     android:id="@+id/linlay1"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:background="#8E7AB5"
+                    android:background="#AD88C6"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -95,18 +85,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:background="@drawable/text_bg"
+                android:paddingTop="35sp"
+                android:paddingHorizontal="50sp"
+                android:textSize="15sp"
                 android:text="TicTacToe - Human VS Robot. The classic game of TicTacToe where you need to use all your brain and power and try to win the AI."
                 android:layout_gravity="center"
                 android:layout_marginLeft="30dp"
                 />
-
         </LinearLayout>
-
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="175dp"
             android:orientation="horizontal"
+            android:layout_marginTop="50dp"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -147,7 +140,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
-                android:text="Guess the words - a game where you need to answer some\nquestions about AI world, trying to guess the word by the letters that are given to you. Sometimes probably you will need to research the answer, but try to remember it."
+                android:background="@drawable/text_bg"
+                android:paddingTop="30sp"
+                android:paddingHorizontal="50sp"
+                android:textSize="15sp"
+                android:text="Guess the words - a game where you need to answer some questions about AI world, trying to guess the word by the letters that are given to you."
                 android:layout_gravity="center"
                 android:layout_marginLeft="30dp"
                 />
@@ -160,6 +157,7 @@
             android:layout_height="175dp"
             android:orientation="horizontal"
             android:padding="10dp"
+            android:layout_marginTop="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -198,12 +196,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:background="@drawable/text_bg"
+                android:paddingTop="40sp"
+                android:paddingHorizontal="50sp"
+                android:textSize="15sp"
                 android:text="Puzzle - a classic puzzle game where you will be given some AI pictures and of course you will need to collect them."
                 android:layout_gravity="center"
                 android:layout_marginLeft="30dp"
                 />
-
         </LinearLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

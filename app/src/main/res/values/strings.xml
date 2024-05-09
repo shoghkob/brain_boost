@@ -18,4 +18,11 @@
     <string name="level1_answer8">ALGORITHMS</string>
     <string name="level1_answer9">EVALUATION</string>
     <string name="level1_answer10">BIAS</string>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Русский</item>
+        <item>Հայերեն</item>
+    </string-array>
+
 </resources>

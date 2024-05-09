@@ -37,6 +37,10 @@ public class loginActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.login_btn);
         signupRedirectText = findViewById(R.id.signupText);
 
+        if (isLoggedIn()) {
+            navigateToMainPage();
+        }
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,15 +75,12 @@ public class loginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success
                             FirebaseUser user = mAuth.getCurrentUser();
                             if (user != null && user.isEmailVerified()) {
-                                // Save user's name and email to SharedPreferences
                                 String userName = user.getDisplayName();
                                 String userEmail = user.getEmail();
                                 saveUserData(userName, userEmail);
 
-                                // Start profile activity
                                 Intent profileIntent = new Intent(loginActivity.this, onboarding.class);
                                 profileIntent.putExtra("userName", userName);
                                 profileIntent.putExtra("userEmail", userEmail);
@@ -89,7 +90,6 @@ public class loginActivity extends AppCompatActivity {
                                 Toast.makeText(loginActivity.this, "Please verify your email!", Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            // Sign in failed
                             Toast.makeText(loginActivity.this, "Authentication failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -97,11 +97,22 @@ public class loginActivity extends AppCompatActivity {
     }
 
     private void saveUserData(String userName, String userEmail) {
-        // Save user's name and email to SharedPreferences
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("userName", userName);
         editor.putString("userEmail", userEmail);
+
+        editor.putBoolean("isLoggedIn", true);
         editor.apply();
+    }
+
+    private boolean isLoggedIn() {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        return preferences.getBoolean("isLoggedIn", false);
+    }
+
+    private void navigateToMainPage() {
+        startActivity(new Intent(loginActivity.this, mainPage.class));
+        finish();
     }
 }

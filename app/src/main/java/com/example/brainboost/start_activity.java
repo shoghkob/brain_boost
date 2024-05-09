@@ -20,12 +20,9 @@ public class start_activity extends AppCompatActivity {
         start_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Check if the user is registered
                 if (isUserRegistered()) {
-                    // User is registered, navigate to MainActivity
                     startActivity(new Intent(start_activity.this, mainPage.class));
                 } else {
-                    // User is not registered, navigate to loginActivity
                     startActivity(new Intent(start_activity.this, loginActivity.class));
                 }
             }

@@ -26,4 +26,14 @@
     <color name="purple_back">#9054FF</color>
     <color name="colorPurple">#332FA2</color>
 
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#673AB7</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPurple1">#994ECC</color>
+    <color name="colorPurple2">#3E187A</color>
+    <color name="orange">#FF9800</color>
+    <color name="darkOrange">#FF5722</color>
+    <color name="shadow_color">#3C3C3C</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="light_grey">#E8E8E8</color>
 </resources>

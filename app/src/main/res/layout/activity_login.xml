@@ -11,9 +11,9 @@
     >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="350dp"
-        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp">
 
@@ -22,54 +22,59 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:padding="20dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login"
+                android:fontFamily="@font/poppins"
                 android:textAlignment="center"
                 android:textColor="@color/lavender"
-                android:textSize="36sp"
+                android:textSize="40sp"
                 android:textStyle="bold" />
 
 
             <EditText
                 android:id="@+id/login_email"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/lavander_border"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
                 android:hint="Email"
+                android:fontFamily="@font/poppins"
                 android:padding="8dp"
-                android:textSize="15dp" />
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/login_password"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/lavander_border"
                 android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
                 android:hint="Password"
+                android:fontFamily="@font/poppins"
                 android:inputType="textPassword"
                 android:padding="8dp"
-                android:textSize="15dp" />
+                android:textSize="20dp" />
 
             <Button
 
                 android:id="@+id/login_btn"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="15dp"
+                android:layout_width="230dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="25dp"
                 android:background="@drawable/lavander_border"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="Login"
-                android:textSize="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"
+                android:textSize="30dp"
 
                 />
 
@@ -80,9 +85,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:padding="8dp"
+                android:fontFamily="@font/poppins"
                 android:text="Don't have an account? Sign Up"
                 android:textColor="@color/lavender"
-                android:textSize="15sp" />
+                android:textSize="20dp" />
 
 
         </LinearLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Brain Boost</string>
+    <string name="heading_one">Изучайте искусственный интеллект!</string>
+    <string name="heading_two">Мозговая тренировка!</string>
+    <string name="heading_three">Практикуйтесь!!</string>
+
+    <string name="desc_one">Исследуйте мир искусственного интеллекта и изучайте основы</string>
+    <string name="desc_two">Тренируйте свой мозг и открывайте новые вещи</string>
+    <string name="desc_three">Практикуйте все, что вы узнали, и гордитесь своими знаниями</string>
+
+    <string name="game1_desc">Крестики-нолики - Человек против Робота. Игра, которая известна всем людям. Но эта игра немного отличается.</string>
+
+    <string name="level1_answer1">ОБЛАСТЬ</string>
+    <string name="level1_answer2">ПРОЦЕДУРА</string>
+    <string name="level1_answer3">ЧАТБОТЫ</string>
+    <string name="level1_answer4">НАВИГАЦИЯ</string>
+    <string name="level1_answer5">СЕТИ</string>
+    <string name="level1_answer6">МОДЕЛЬ</string>
+    <string name="level1_answer7">ПАЙТОН</string>
+    <string name="level1_answer8">АЛГОРИТМЫ</string>
+    <string name="level1_answer9">ОЦЕНКА</string>
+    <string name="level1_answer10">ПРЕДВЗЯТИЕ</string>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Русский</item>
+        <item>Հայերեն</item>
+    </string-array>
+
+</resources>

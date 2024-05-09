@@ -4,16 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class mainPage extends AppCompatActivity {
 
-    ImageView profile_icon;
-    ImageView first_course;
-    ImageView games;
-    ImageView game1;
-    ImageView game2;
+    ImageView profile_icon, first_course, games, game1, game2, game3, courseIcon;
+    TextView seeAll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +24,11 @@ public class mainPage extends AppCompatActivity {
         games = findViewById(R.id.games);
         game1 = findViewById(R.id.game1);
         game2 = findViewById(R.id.game2);
-        ImageView game3 = findViewById(R.id.game3);
-        ImageView courseIcon = findViewById(R.id.course);
+        game3 = findViewById(R.id.game3);
+        courseIcon = findViewById(R.id.course);
+
+        seeAll = findViewById(R.id.seeAllText);
+
         profile_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +76,12 @@ public class mainPage extends AppCompatActivity {
             }
         });
 
+        seeAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mainPage.this, CoursePage.class));
+            }
+        });
     }
 
 }
