@@ -28,7 +28,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TicTacToe\n HUMAN vs AI"
+                android:text="@string/game1_name"
+                android:fontFamily="@font/poppins"
+                android:textAlignment="center"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="@color/lavender"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/human_vs_robot"
                 android:fontFamily="@font/poppins"
                 android:textAlignment="center"
                 android:textSize="36sp"
@@ -39,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
-                android:text="Ready to test your strength and compete with AI?"
+                android:text="@string/ready_text"
                 android:textAlignment="center"
                 android:layout_marginTop="10sp"
                 android:textSize="25sp"
@@ -48,7 +57,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="I'm sure you can win!"
+                android:text="@string/sure_text"
                 android:fontFamily="@font/poppins"
                 android:textAlignment="center"
                 android:layout_marginTop="10sp"
@@ -61,10 +70,10 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="10sp"
                 android:id="@+id/startGameButton"
-                android:text="Start Game"
+                android:text="@string/start_game_text"
                 android:fontFamily="@font/poppins"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="25sp"
                 app:cornerRadius = "20dp"/>
 
         </LinearLayout>

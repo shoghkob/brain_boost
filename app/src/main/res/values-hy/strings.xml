@@ -1,0 +1,96 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Brain Boost</string>
+    <string name="app_slogan">Սովորի՛ր ապագայի համար</string>
+    <string name="heading_one">Ուսումնասիրիր ԱԲ-ը</string>
+    <string name="heading_two">Գործի դի՛ր ուղեղդ</string>
+    <string name="heading_three">Պրակտիկա</string>
+    <string name="desc_one">Հետազոտեք ԱԲ-ի աշխարհը և սովորեք հիմունքները</string>
+    <string name="desc_two">Մարզեցրեք ձեր ուղեղը և բացահայտեք նոր մտքեր</string>
+    <string name="desc_three">Պրակտիկ օգտագործեք ձեր ստացած գիտելիքները և հպարտացեք դրանցով</string>
+
+    <string name="get_started">Սկսել</string>
+
+    <!-- login/register -->
+    <string name="login">Մուտք</string>
+    <string name="signup">Գրանցում</string>
+    <string name="name_text">Անուն</string>
+    <string name="email_text">Էլ․ հասցե</string>
+    <string name="password_text">Գաղտնաբառ</string>
+    <string name="confirm_password_text">Հաստատել գաղտնաբառը</string>
+    <string name="signup_text">Չունե՞ք օգտաէջ։ Գրանցվել</string>
+    <string name="login_text">Արդեն ունե՞ք օգտաէջ։ Մուտք</string>
+
+    <!-- main page -->
+    <string name="welcome_text">Բարի գալուստ</string>
+    <string name="expr1">• Սովորեք ԱԲ-ը</string>
+    <string name="expr2">• Բացեք աշխարհը</string>
+    <string name="expr3">• Վայելեք խաղերը</string>
+    <string name="spin_wheel_text">Պտտել անիվը</string>
+    <string name="check_coins_text">Ստուգել քոիննեը</string>
+    <string name="our_games_text">Մեր խաղերը</string>
+    <string name="game1_name">Խաչեր-զրոներ</string>
+    <string name="game2_name">Գուշակիրը բառը</string>
+    <string name="game3_name">Փազլ</string>
+    <string name="our_courses_text">Մեր կուրսերը</string>
+    <string name="see_all_text">Դիտել բոլորը</string>
+    <string name="course1_name">Ներածություն</string>
+    <string name="course2_name">Նեյրոնային ցանցեր</string>
+    <string name="course3_name">Մեծ տվյալներ</string>
+
+    <!-- games page -->
+    <string name="games_text">Խաղեր</string>
+    <string name="game1_desc">Խաչեր-զրոներ - Մարդն ընդդեմ AI-ի. Դասական tic-tac-toe խաղ, որտեղ դուք պետք է օգտագործեք ձեր ողջ ուժն ու ուղեղը AI-ին հաղթելու համար:</string>
+    <string name="game2_desc">Գուշակիր բառը - խաղ, որտեղ դուք պետք է պատասխանեք ԱԲ աշխարհի մասին մի քանի հարցերի՝ փորձելով գուշակել ձեզ տրված տառերից որևէ բառ:</string>
+    <string name="game3_desc">Փազլ - դասական հանելուկ խաղ, որտեղ ձեզ կտրամադրվեն ԱԲ-ին վերաբերող որոշ նկարներ և, իհարկե, դուք պետք է հավաքեք դրանք։</string>
+
+    <!-- profile page -->
+    <string name="settings_text">Կարգավորումներ</string>
+    <string name="progress_text">Ստուգել առաջընթացը</string>
+    <string name="languages_text">Լեզուներ</string>
+    <string name="about_text">Մեր մասին</string>
+    <string name="logout_text">Դուրս գալ</string>
+
+    <!-- tictactoe -->
+    <string name="human_vs_robot">Մարդն ընդդեմ ԱԲ-ի</string>
+    <string name="robot_name">Ռոբոտ</string>
+    <string name="good_luck_text">Հաջողությու՜ն</string>
+    <string name="ready_text">Պատրա՞ստ եք փորձել ձեր ուժերը և մրցել ԱԲ-ի հետ։</string>
+    <string name="sure_text">Համոզված եմ, որ կարող ես հաղթել։</string>
+    <string name="start_game_text">Սկսել խաղը</string>
+    <string name="level1_text">Մակարդակ 1</string>
+    <string name="level2_text">Մակարդակ 2</string>
+    <string name="level3_text">Մակարդակ 3</string>
+    <string name="level4_text">Մակարդակ 4</string>
+    <string name="level5_text">Մակարդակ 5</string>
+    <string name="level6_text">Մակարդակ 6</string>
+    <string name="start_again_text">Նորից սկսել</string>
+    <string name="return_main_page_text">Վերադառնալ գլխավոր էջ</string>
+    <string name="ai_wins_text">ԱԲ-ն հաղթեց։</string>
+    <string name="you_win_text">Դուք հաղթեցիք։</string>
+    <string name="draw_text">Ոչ ոքի</string>
+
+    <!-- guess the words -->
+    <string name="levels_text">Մակարդակներ</string>
+
+    <string name="question_1">Ո՞րն է տարբերությունը նեղ և ընդհանուր ԱԲ-ի միջև:</string>
+    <string name="question_2">Սահմանեք ալգորիթմը:</string>
+    <string name="question_3">Որո՞նք են նեղ արհեստական բանականության օրինակները:</string>
+    <string name="question_4">Ո՞րն է AI-ի նպատակը ինքնավար մեքենաներում:</string>
+    <string name="question_5">Ի՞նչ է նշանակում RNN:</string>
+    <string name="question_6">Ի՞նչ է նեյրոնային ցանցը:</string>
+    <string name="question_7">Անվանեք մեկ AI ծրագրավորման լեզու:</string>
+    <string name="question_8">Ինչպե՞ս է աշխատում AI-ն:</string>
+    <string name="question_9">Ի՞նչ է Թյուրինգի թեստը:</string>
+    <string name="question_10">AI-ի ռիսկերը:</string>
+
+    <string name="question_text">Հարց</string>
+    <string name="letters_text">Տառեր</string>
+
+    <string name="pictures_text">Նկարներ</string>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Русский</item>
+        <item>Հայերեն</item>
+    </string-array>
+</resources>

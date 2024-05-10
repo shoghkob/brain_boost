@@ -45,7 +45,7 @@
         android:id="@+id/imageView3"
         android:layout_width="250dp"
         android:layout_height="200dp"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toTopOf="@+id/view2"
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/poppins"
-        android:text="Welcome"
+        android:text="@string/welcome_text"
         android:textColor="@color/color_white"
         android:textSize="40dp"
         android:textStyle="bold"
@@ -72,7 +72,7 @@
         android:layout_marginStart="-1dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
-        android:text="• Learn AI "
+        android:text="@string/expr1"
         android:textColor="@color/color_white"
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="@+id/textView3"
@@ -83,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:text="• Discover world"
+        android:text="@string/expr2"
         android:textColor="@color/color_white"
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="@+id/textView4"
@@ -94,7 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:text="• Enjoy games"
+        android:text="@string/expr3"
         android:textColor="@color/color_white"
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="@+id/textView5"
@@ -112,7 +112,7 @@
         android:fontFamily="@font/poppins"
         android:gravity="center"
         android:paddingLeft="40dp"
-        android:text="Speen Wheel"
+        android:text="@string/spin_wheel_text"
         android:textColor="@color/color_white"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -134,7 +134,7 @@
         android:fontFamily="@font/poppins"
         android:gravity="center"
         android:paddingLeft="40dp"
-        android:text="Check Coins"
+        android:text="@string/check_coins_text"
         android:textColor="@color/color_white"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -254,7 +254,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins"
-            android:text="Our Games"
+            android:text="@string/our_games_text"
             android:textAlignment="center"
             android:textSize="40dp"
             android:textStyle="bold" />
@@ -292,7 +292,7 @@
                         android:layout_marginTop="12sp"
                         android:layout_marginBottom="8dp"
                         android:fontFamily="@font/poppins"
-                        android:text="TicTacToe"
+                        android:text="@string/game1_name"
                         android:textAlignment="center"
                         android:textSize="27sp"
                         android:textStyle="bold" />
@@ -315,12 +315,12 @@
 
                     <TextView
                         android:id="@+id/game2Text"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12sp"
                         android:layout_marginBottom="8dp"
                         android:fontFamily="@font/poppins"
-                        android:text="Guess the words"
+                        android:text="@string/game2_name"
                         android:textAlignment="center"
                         android:textSize="27sp"
                         android:textStyle="bold" />
@@ -348,123 +348,13 @@
                         android:layout_marginTop="12sp"
                         android:layout_marginBottom="8dp"
                         android:fontFamily="@font/poppins"
-                        android:text="Puzzle"
+                        android:text="@string/game3_name"
                         android:textAlignment="center"
                         android:textSize="27sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
             </LinearLayout>
-
-            <!--                <LinearLayout-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:orientation="horizontal">-->
-
-            <!--                    <LinearLayout-->
-            <!--                        android:layout_width="0dp"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_margin="10dp"-->
-            <!--                        android:layout_weight="0.25"-->
-            <!--                        android:background="@drawable/green_background"-->
-            <!--                        android:orientation="vertical">-->
-
-            <!--                        <ImageView-->
-            <!--                            android:id="@+id/game5"-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:src="@drawable/game5" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:id="@+id/game5Text"-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_marginBottom="8dp"-->
-            <!--                            android:text="Game5"-->
-            <!--                            android:textAlignment="center"-->
-            <!--                            android:textSize="12sp"-->
-            <!--                            android:textStyle="bold" />-->
-
-            <!--                    </LinearLayout>-->
-
-            <!--                    <LinearLayout-->
-            <!--                        android:layout_width="0dp"-->
-            <!--                        android:layout_height="match_parent"-->
-            <!--                        android:layout_margin="10dp"-->
-            <!--                        android:layout_weight="0.25"-->
-            <!--                        android:background="@drawable/green_background"-->
-            <!--                        android:orientation="vertical">-->
-
-            <!--                        <ImageView-->
-            <!--                            android:id="@+id/game6"-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:src="@drawable/game6" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:id="@+id/game6Text"-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_marginBottom="8dp"-->
-            <!--                            android:text="Game6"-->
-            <!--                            android:textAlignment="center"-->
-            <!--                            android:textSize="12sp"-->
-            <!--                            android:textStyle="bold" />-->
-
-            <!--                    </LinearLayout>-->
-
-            <!--                    <LinearLayout-->
-            <!--                        android:layout_width="0dp"-->
-            <!--                        android:layout_height="match_parent"-->
-            <!--                        android:layout_margin="10dp"-->
-            <!--                        android:layout_weight="0.25"-->
-            <!--                        android:background="@drawable/green_background"-->
-            <!--                        android:orientation="vertical">-->
-
-            <!--                        <ImageView-->
-            <!--                            android:id="@+id/game7"-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:src="@drawable/game7" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:id="@+id/game7Text"-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_marginBottom="8dp"-->
-            <!--                            android:text="Game7"-->
-            <!--                            android:textAlignment="center"-->
-            <!--                            android:textSize="12sp"-->
-            <!--                            android:textStyle="bold" />-->
-
-            <!--                    </LinearLayout>-->
-
-            <!--                    <LinearLayout-->
-            <!--                        android:layout_width="0dp"-->
-            <!--                        android:layout_height="match_parent"-->
-            <!--                        android:layout_margin="10dp"-->
-            <!--                        android:layout_weight="0.25"-->
-            <!--                        android:background="@drawable/green_background"-->
-            <!--                        android:orientation="vertical">-->
-
-            <!--                        <ImageView-->
-            <!--                            android:id="@+id/imageView7"-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:src="@drawable/game8" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:id="@+id/textView"-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_marginBottom="8dp"-->
-            <!--                            android:text="Game8"-->
-            <!--                            android:textAlignment="center"-->
-            <!--                            android:textSize="12sp"-->
-            <!--                            android:textStyle="bold" />-->
-
-            <!--                    </LinearLayout>-->
-            <!--                </LinearLayout>-->
         </LinearLayout>
 
         <LinearLayout
@@ -473,7 +363,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="15dp"
             android:orientation="horizontal">
 
             <TextView
@@ -482,7 +372,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins"
-                android:text="Our Courses"
+                android:text="@string/our_courses_text"
                 android:textSize="40dp"
                 android:textStyle="bold" />
 
@@ -491,7 +381,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="See All"
+                android:text="@string/see_all_text"
                 android:textAlignment="viewEnd"
                 android:textColor="#B4B4B8"
                 android:textSize="35dp"
@@ -509,7 +399,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="260dp"
-                    android:layout_height="145dp"
+                    android:layout_height="143dp"
                     android:layout_marginLeft="20dp"
                     android:backgroundTint="#ADA2FF"
                     app:cardCornerRadius="20dp">
@@ -533,7 +423,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins"
-                            android:text="Introduction to AI"
+                            android:text="@string/course1_name"
                             android:textColor="@color/white"
                             android:textSize="20sp" />
 
@@ -543,7 +433,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="260dp"
-                    android:layout_height="145dp"
+                    android:layout_height="143dp"
                     android:layout_marginLeft="20dp"
                     android:backgroundTint="#7469B6"
                     app:cardCornerRadius="20dp">
@@ -567,7 +457,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins"
-                            android:text="Neural Networks"
+                            android:text="@string/course2_name"
                             android:textColor="@color/white"
                             android:textSize="20sp" />
 
@@ -577,7 +467,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="260dp"
-                    android:layout_height="145dp"
+                    android:layout_height="143dp"
                     android:layout_marginLeft="20dp"
                     android:backgroundTint="@color/lavender"
                     app:cardCornerRadius="20dp">
@@ -601,7 +491,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins"
-                            android:text="Smart and Big Data"
+                            android:text="@string/course3_name"
                             android:textColor="@color/white"
                             android:textSize="20sp" />
 

@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -17,17 +15,12 @@ import java.util.Random;
 public class TicTacToe extends AppCompatActivity {
 
     private final List<int[]> combinationsList = new ArrayList<>();
-
     private int[] boxPositions = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-
     private int currentPlayer = 1;
-
     private int totalSelectedBoxes = 0;
-
     private LinearLayout playerOneLayout, playerTwoLayout;
     private TextView playerNameTextView;
     private ImageView[] boxes;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +32,8 @@ public class TicTacToe extends AppCompatActivity {
         playerTwoLayout = findViewById(R.id.playerTwoLayout);
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("userName", "");
-        playerNameTextView.setText(userName);
+        String playerName = preferences.getString("userName", "Player");
+        playerNameTextView.setText(playerName);
 
         boxes = new ImageView[9];
         boxes[0] = findViewById(R.id.image1);
@@ -72,12 +65,12 @@ public class TicTacToe extends AppCompatActivity {
                         totalSelectedBoxes++;
                         updateUI(position);
                         if (checkWin(currentPlayer)) {
-                            showResult("You win!");
+                            showResult(getResources().getString(R.string.you_win_text));
                         } else if (totalSelectedBoxes == 9) {
-                            showResult("It's a draw!");
+                            showResult(getResources().getString(R.string.draw_text));
                         } else {
                             currentPlayer = 2;
-                            playerNameTextView.setText("Robot");
+                            playerNameTextView.setText(preferences.getString("userName", "Player"));
                             makeAiMove();
                         }
                     }
@@ -106,14 +99,11 @@ public class TicTacToe extends AppCompatActivity {
         totalSelectedBoxes++;
         updateUI(aiMove);
         if (checkWin(2)) {
-            showResult("AI wins!");
+            showResult(getResources().getString(R.string.ai_wins_text));
         } else if (totalSelectedBoxes == 9) {
-            showResult("It's a draw!");
+            showResult(getResources().getString(R.string.draw_text));
         } else {
             currentPlayer = 1;
-            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-            String name = sharedPreferences.getString("username", "Your Name");
-            playerNameTextView.setText(name);
         }
     }
 
@@ -184,9 +174,5 @@ public class TicTacToe extends AppCompatActivity {
         for (ImageView box : boxes) {
             box.setImageResource(R.drawable.white_box);
         }
-
-        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        String name = sharedPreferences.getString("username", "Your Name");
-        playerNameTextView.setText(name);
     }
 }

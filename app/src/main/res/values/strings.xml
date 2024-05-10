@@ -1,5 +1,6 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Brain Boost</string>
+    <string name="app_slogan">Study For Future</string>
     <string name="heading_one">Learn AI</string>
     <string name="heading_two">Brain Storming!</string>
     <string name="heading_three">Practice!</string>
@@ -7,7 +8,81 @@
     <string name="desc_two">Train your brain and discover new things</string>
     <string name="desc_three">Practice everything you have learned and be proud of your knowledge</string>
 
-    <string name="game1_desc">TicTacToe - Human VS Robot. A game that is known among all people. But this TicTacToe is a little bit different.</string>
+    <string name="get_started">Get started</string>
+
+    // login/register
+    <string name="login">Login</string>
+    <string name="signup">Sign up</string>
+    <string name="name_text">Sign up</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="confirm_password_text">Confirm password</string>
+    <string name="signup_text">Do not have an account? Sign Up</string>
+    <string name="login_text">Already have an account? Login</string>
+
+    // main page
+    <string name="welcome_text">Welcome</string>
+    <string name="expr1">• Learn AI </string>
+    <string name="expr2">• Discover world</string>
+    <string name="expr3">• Enjoy games</string>
+    <string name="spin_wheel_text">Spin The Wheel</string>
+    <string name="check_coins_text">Check Coins</string>
+    <string name="our_games_text">Our Games</string>
+    <string name="game1_name">TicTacToe</string>
+    <string name="game2_name">Guess the words</string>
+    <string name="game3_name">Puzzle</string>
+    <string name="our_courses_text">Our Courses</string>
+    <string name="see_all_text">See all</string>
+    <string name="course1_name">Introduction to AI</string>
+    <string name="course2_name">Neural Networks</string>
+    <string name="course3_name">Smart and Big Data</string>
+
+    // games page
+    <string name="games_text">Games</string>
+    <string name="game1_desc">TicTacToe - Human VS Robot. The classic game of TicTacToe where you need to use all your brain and power and try to win the AI.</string>
+    <string name="game2_desc">Guess the words - a game where you need to answer some questions about AI world, trying to guess the word by the letters that are given to you.</string>
+    <string name="game3_desc">Puzzle - a classic puzzle game where you will be given some AI pictures and of course you will need to collect them.</string>
+
+    // profile page
+    <string name="settings_text">Settings</string>
+    <string name="progress_text">Check progress</string>
+    <string name="languages_text">Languages</string>
+    <string name="about_text">About us</string>
+    <string name="logout_text">Log Out</string>
+
+    //tictactoe
+    <string name="human_vs_robot">Human vs AI</string>
+    <string name="robot_name">Robot</string>
+    <string name="good_luck_text">Good luck!</string>
+    <string name="ready_text">Ready to test your strength and compete with AI?</string>
+    <string name="sure_text">I am sure you can win!</string>
+    <string name="start_game_text">Start Game</string>
+    <string name="level1_text">Level 1</string>
+    <string name="level2_text">Level 2</string>
+    <string name="level3_text">Level 3</string>
+    <string name="level4_text">Level 4</string>
+    <string name="level5_text">Level 5</string>
+    <string name="level6_text">Level 6</string>
+    <string name="start_again_text">Start Again</string>
+    <string name="return_main_page_text">Return main page</string>
+    <string name="ai_wins_text">AI wins!</string>
+    <string name="you_win_text">You win!</string>
+    <string name="draw_text">It is a draw!</string>
+
+    // guess the words
+    <string name="levels_text">Levels</string>
+
+    <string name="question_1">What is the difference between narrow AI and general AI?</string>
+    <string name="question_2">Define algorithm.</string>
+    <string name="question_3">What are some examples of narrow AI?</string>
+    <string name="question_4">What is the purpose of AI in autonomous vehicles?</string>
+    <string name="question_5">What does RNN stand for?</string>
+    <string name="question_6">What is neural network?</string>
+    <string name="question_7">Name one AI programming language.</string>
+    <string name="question_8">How does AI work?</string>
+    <string name="question_9">What is the Turing Test?</string>
+    <string name="question_10">Risks of AI?</string>
+
     <string name="level1_answer1">SCOPE</string>
     <string name="level1_answer2">PROCEDURE</string>
     <string name="level1_answer3">CHATBOTS</string>
@@ -18,6 +93,24 @@
     <string name="level1_answer8">ALGORITHMS</string>
     <string name="level1_answer9">EVALUATION</string>
     <string name="level1_answer10">BIAS</string>
+
+    <string name="question_text">Question</string>
+    <string name="letters_text">Letters</string>
+    <string name="pictures_text">Pictures</string>
+
+    // first-course-page
+    <string name="course1_desc">This course will introduce you to AI world!</string>
+    <string name="all_lessons_text">All lessons</string>
+    <string name="lesson1_name">1. Introduction to AI</string>
+    <string name="lesson_two_name">2. Types of Artificial Intelligence</string>
+    <string name="lesson3_name">3. Domains of Artificial Intelligence</string>
+    <string name="lesson4_name">4. Subsets of Artificial Intelligence</string>
+    <string name="lesson5_name">5. Applications of AI in Modern World</string>
+    <string name="lesson6_name">6. Role of AI in Handling COVID-19 Pandemic</string>
+    <string name="lesson7_name">7. AI for Advanced Medical Diagnosis</string>
+    <string name="lesson8_name">8. What is Deep Learning?</string>
+    <string name="lesson9_name">9. What is Generative AI?</string>
+    <string name="lesson10_name">10. Search and Control Strategies</string>
 
     <string-array name="language_options">
         <item>English</item>

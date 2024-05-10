@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/quiz_game_bg"
+    android:background="@drawable/levels_bg"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="100dp"
         android:text="Question 1"
-        android:textColor="#FFF"
-        android:textSize="22sp"
+        android:textColor="#58287F"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_width="320dp"
+        android:layout_width="500dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
@@ -36,15 +36,15 @@
             android:text="Here will be a question"
             android:textAlignment="center"
             android:textColor="#332FA2"
-            android:textSize="26sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="250dp"
-        android:layout_height="80dp"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="70dp"
@@ -64,9 +64,9 @@
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
         android:layout_marginBottom="16dp"
-        android:text="Letters"
-        android:textColor="#FFF"
-        android:textSize="24sp"
+        android:text="@string/letters_text"
+        android:textColor="#58287F"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <RelativeLayout
@@ -79,8 +79,8 @@
             android:id="@+id/layoutParent1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:gravity="center"
             android:orientation="horizontal" />
 

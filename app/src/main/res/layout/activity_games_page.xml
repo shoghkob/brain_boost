@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/bg_1"
             android:paddingTop="75sp"
-            android:text="Games"
+            android:text="@string/games_text"
             android:textAlignment="center"
             android:textColor="#F6F5F2"
             android:textSize="40sp"
@@ -74,7 +74,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="TicTacToe - Human VS Robot"
+                        android:text="@string/game1_name"
                         android:padding="2dp"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
@@ -86,10 +86,10 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
                 android:background="@drawable/text_bg"
-                android:paddingTop="35sp"
+                android:paddingTop="30sp"
                 android:paddingHorizontal="50sp"
                 android:textSize="15sp"
-                android:text="TicTacToe - Human VS Robot. The classic game of TicTacToe where you need to use all your brain and power and try to win the AI."
+                android:text="@string/game1_desc"
                 android:layout_gravity="center"
                 android:layout_marginLeft="30dp"
                 />
@@ -130,7 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Guess the words"
+                        android:text="@string/game2_name"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
@@ -144,7 +144,7 @@
                 android:paddingTop="30sp"
                 android:paddingHorizontal="50sp"
                 android:textSize="15sp"
-                android:text="Guess the words - a game where you need to answer some questions about AI world, trying to guess the word by the letters that are given to you."
+                android:text="@string/game2_desc"
                 android:layout_gravity="center"
                 android:layout_marginLeft="30dp"
                 />
@@ -186,7 +186,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Puzzle"
+                        android:text="@string/game3_name"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
@@ -200,7 +200,7 @@
                 android:paddingTop="40sp"
                 android:paddingHorizontal="50sp"
                 android:textSize="15sp"
-                android:text="Puzzle - a classic puzzle game where you will be given some AI pictures and of course you will need to collect them."
+                android:text="@string/game3_desc"
                 android:layout_gravity="center"
                 android:layout_marginLeft="30dp"
                 />

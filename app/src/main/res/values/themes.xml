@@ -1,25 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.BrainBoost" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme_BrainBoost_Light" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.BrainBoost" parent="Base.Theme.BrainBoost" />
+    <style name="Theme.BrainBoost" parent="Theme_BrainBoost_Light" />
 
-    <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
+    <style name="nightModeSwitch" parent="Theme_BrainBoost_Light">
         <item name="colorControlActivated">@color/night_mode</item>
         <item name="colorSwitchThumbNormal">@color/white</item>
         <item name="android:colorForeground">#99FFFFFF</item>
     </style>
 
-    <style name="notificationSwitch" parent="Theme.AppCompat.Light">
+    <style name="notificationSwitch" parent="Theme_BrainBoost_Light">
         <item name="colorControlActivated">@color/notifications</item>
         <item name="colorSwitchThumbNormal">@color/white</item>
         <item name="android:colorForeground">#99FFFFFF</item>
     </style>
 
-    <style name="privateAccountSwitch" parent="Theme.AppCompat.Light">
+    <style name="privateAccountSwitch" parent="Theme_BrainBoost_Light">
         <item name="colorControlActivated">@color/private_account</item>
         <item name="colorSwitchThumbNormal">@color/white</item>
         <item name="android:colorForeground">#99FFFFFF</item>

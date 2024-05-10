@@ -50,7 +50,7 @@ public class QuizGame extends AppCompatActivity {
 
         initializeQuestions();
 
-        textTitle.setText("Letters");
+        textTitle.setText(getResources().getString(R.string.letters_text));
 
         inputAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,40 +63,40 @@ public class QuizGame extends AppCompatActivity {
     }
 
     private void initializeQuestions() {
-        questions.add("What is the difference between narrow AI and general AI?");
+        questions.add(getResources().getString(R.string.question_1));
         answers.add(getResources().getString(R.string.level1_answer1));
 
-        questions.add("Define 'algorithm'.");
+        questions.add(getResources().getString(R.string.question_2));
         answers.add(getResources().getString(R.string.level1_answer2));
 
-        questions.add("What are some examples of narrow AI?");
+        questions.add(getResources().getString(R.string.question_3));
         answers.add(getResources().getString(R.string.level1_answer3));
 
-        questions.add("What is the purpose of AI in autonomous vehicles?");
+        questions.add(getResources().getString(R.string.question_4));
         answers.add(getResources().getString(R.string.level1_answer4));
 
-        questions.add("What does RNN stand for?");
+        questions.add(getResources().getString(R.string.question_5));
         answers.add(getResources().getString(R.string.level1_answer5));
 
-        questions.add("What is neural network?");
+        questions.add(getResources().getString(R.string.question_6));
         answers.add(getResources().getString(R.string.level1_answer6));
 
-        questions.add("Name one AI programming language.");
+        questions.add(getResources().getString(R.string.question_7));
         answers.add(getResources().getString(R.string.level1_answer7));
 
-        questions.add("How does AI work?");
+        questions.add(getResources().getString(R.string.question_8));
         answers.add(getResources().getString(R.string.level1_answer8));
 
-        questions.add("What is the Turing Test?");
+        questions.add(getResources().getString(R.string.question_9));
         answers.add(getResources().getString(R.string.level1_answer9));
 
-        questions.add("Risks of AI?");
+        questions.add(getResources().getString(R.string.question_10));
         answers.add(getResources().getString(R.string.level1_answer10));
     }
 
     private void loadQuestion() {
         if (currentQuestionIndex < questions.size()) {
-            String questionNumber = "Question " + (currentQuestionIndex + 1);
+            String questionNumber = getResources().getString(R.string.question_text) + " " + (currentQuestionIndex + 1);
             textScreen.setText(questionNumber);
 
             textQuestion.setText(questions.get(currentQuestionIndex));
@@ -172,7 +172,7 @@ public class QuizGame extends AppCompatActivity {
         textView.setText(text);
         textView.setClickable(true);
         textView.setFocusable(true);
-        textView.setTextSize(32);
+        textView.setTextSize(40);
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/FredokaOneRegular.ttf");
         textView.setTypeface(typeface);

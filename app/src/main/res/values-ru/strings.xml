@@ -1,30 +1,96 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Brain Boost</string>
+    <string name="app_slogan">Учись для будущего</string>
     <string name="heading_one">Изучайте искусственный интеллект!</string>
-    <string name="heading_two">Мозговая тренировка!</string>
-    <string name="heading_three">Практикуйтесь!!</string>
-
+    <string name="heading_two">Мозговая работа!</string>
+    <string name="heading_three">Практика!</string>
     <string name="desc_one">Исследуйте мир искусственного интеллекта и изучайте основы</string>
     <string name="desc_two">Тренируйте свой мозг и открывайте новые вещи</string>
-    <string name="desc_three">Практикуйте все, что вы узнали, и гордитесь своими знаниями</string>
+    <string name="desc_three">Практикуйте все, что вы изучили, и гордитесь своими знаниями</string>
 
-    <string name="game1_desc">Крестики-нолики - Человек против Робота. Игра, которая известна всем людям. Но эта игра немного отличается.</string>
+    <string name="get_started">Начать</string>
 
-    <string name="level1_answer1">ОБЛАСТЬ</string>
-    <string name="level1_answer2">ПРОЦЕДУРА</string>
-    <string name="level1_answer3">ЧАТБОТЫ</string>
-    <string name="level1_answer4">НАВИГАЦИЯ</string>
-    <string name="level1_answer5">СЕТИ</string>
-    <string name="level1_answer6">МОДЕЛЬ</string>
-    <string name="level1_answer7">ПАЙТОН</string>
-    <string name="level1_answer8">АЛГОРИТМЫ</string>
-    <string name="level1_answer9">ОЦЕНКА</string>
-    <string name="level1_answer10">ПРЕДВЗЯТИЕ</string>
+    <!-- login/register -->
+    <string name="login">Войти</string>
+    <string name="signup">Регистрация</string>
+    <string name="name_text">Имя</string>
+    <string name="email_text">Эл. адрес</string>
+    <string name="password_text">Пароль</string>
+    <string name="confirm_password_text">Подтвердите пароль</string>
+    <string name="signup_text">Еще нет аккаунта? Зарегистрироваться</string>
+    <string name="login_text">Уже есть аккаунт? Войти</string>
+
+    <!-- main page -->
+    <string name="welcome_text">Добро пожаловать</string>
+    <string name="expr1">• Изучайте ИИ</string>
+    <string name="expr2">• Открывайте мир</string>
+    <string name="expr3">• Наслаждайтесь играми</string>
+    <string name="spin_wheel_text">Покрутить колесо</string>
+    <string name="check_coins_text">Проверить монеты</string>
+    <string name="our_games_text">Наши игры</string>
+    <string name="game1_name">Крестики-нолики</string>
+    <string name="game2_name">Угадай слова</string>
+    <string name="game3_name">Пазл</string>
+    <string name="our_courses_text">Наши курсы</string>
+    <string name="see_all_text">Посмотреть все</string>
+    <string name="course1_name">Введение в ИИ</string>
+    <string name="course2_name">Нейронные сети</string>
+    <string name="course3_name">Умные и большие данные</string>
+
+    <!-- games page -->
+    <string name="games_text">Игры</string>
+    <string name="game1_desc">Крестики-нолики - Человек против ИИ. Классическая игра в крестики-нолики, где вам нужно использовать всю свою силу и мозг, чтобы победить ИИ.</string>
+    <string name="game2_desc">Угадай слова - игра, в которой вам нужно ответить на несколько вопросов о мире искусственного интеллекта, пытаясь угадать слово по буквам, которые вам даны.</string>
+    <string name="game3_desc">Пазл - классическая игра в пазлы, где вам будут даны некоторые картинки ИИ, и, конечно, вам нужно будет их собрать.</string>
+
+    <!-- profile page -->
+    <string name="settings_text">Настройки</string>
+    <string name="progress_text">Проверить прогресс</string>
+    <string name="languages_text">Языки</string>
+    <string name="about_text">О нас</string>
+    <string name="logout_text">Выйти</string>
+
+    <!-- tictactoe -->
+    <string name="human_vs_robot">Человек против ИИ</string>
+    <string name="robot_name">Робот</string>
+    <string name="good_luck_text">Удачи!</string>
+    <string name="ready_text">Готовы проверить свои силы и сразиться с ИИ?</string>
+    <string name="sure_text">Уверен, ты можешь победить!</string>
+    <string name="start_game_text">Начать игру</string>
+    <string name="level1_text">Уровень 1</string>
+    <string name="level2_text">Уровень 2</string>
+    <string name="level3_text">Уровень 3</string>
+    <string name="level4_text">Уровень 4</string>
+    <string name="level5_text">Уровень 5</string>
+    <string name="level6_text">Уровень 6</string>
+    <string name="start_again_text">Начать заново</string>
+    <string name="return_main_page_text">Вернуться на главную страницу</string>
+    <string name="ai_wins_text">ИИ победил!</string>
+    <string name="you_win_text">Вы победили!</string>
+    <string name="draw_text">Ничья!</string>
+
+    <!-- guess the words -->
+    <string name="levels_text">Уровни</string>
+
+    <string name="question_1">Какова разница между узким и общим искусственным интеллектом?</string>
+    <string name="question_2">Определите алгоритм.</string>
+    <string name="question_3">Какие примеры узкого искусственного интеллекта?</string>
+    <string name="question_4">Какова цель ИИ в автономных транспортных средствах?</string>
+    <string name="question_5">Что означает RNN?</string>
+    <string name="question_6">Что такое нейронная сеть?</string>
+    <string name="question_7">Назовите один язык программирования ИИ.</string>
+    <string name="question_8">Как работает ИИ?</string>
+    <string name="question_9">Что такое тест Тьюринга?</string>
+    <string name="question_10">Риски ИИ?</string>
+
+    <string name="question_text">Вопрос </string>
+    <string name="letters_text">Буквы</string>
+
+    <string name="pictures_text">Картинки</string>
 
     <string-array name="language_options">
         <item>English</item>
         <item>Русский</item>
         <item>Հայերեն</item>
     </string-array>
-
 </resources>

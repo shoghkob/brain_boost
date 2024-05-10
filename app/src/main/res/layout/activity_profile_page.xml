@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings"
+            android:text="@string/settings_text"
             android:fontFamily="@font/poppins"
             android:layout_centerInParent="true"
             android:textColor="@color/white"
@@ -70,47 +70,47 @@
                 android:layout_gravity="center" />
 
             <LinearLayout
+                android:id="@+id/progress_layout"
                 android:background="@drawable/round_back_white10_20"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="50dp"
                 android:orientation="vertical"
                 android:padding="15dp">
-
-                <!-- Dark Mode -->
+                <!-- Progress -->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/nightModeIcon"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:background="@drawable/round_back_night_mode"
+                        android:id="@+id/progressIcon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/baseline_analytics_24"
+                        android:background="@drawable/round_back_private_account"
                         android:padding="12dp"
-                        android:src="@drawable/dark_mode_24px" />
+                        android:onClick="showLanguageDialog" />
 
                     <TextView
                         android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Night Mode"
+                        android:text="@string/progress_text"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="20dp"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:textSize="20dp"
-                        android:fontFamily="@font/poppins"
-                        android:layout_toEndOf="@+id/nightModeIcon" />
+                        android:layout_toEndOf="@+id/progressIcon" />
 
-                    <androidx.appcompat.widget.SwitchCompat
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:src="@drawable/chevron_right_24px"
                         android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch" />
+                        android:layout_centerVertical="true"/>
                 </RelativeLayout>
             </LinearLayout>
             <LinearLayout
@@ -142,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Languages"
+                        android:text="@string/languages_text"
                         android:fontFamily="@font/poppins"
                         android:textSize="20dp"
                         android:textColor="@color/white"
@@ -184,7 +184,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="About Us"
+                        android:text="@string/about_text"
                         android:fontFamily="@font/poppins"
                         android:textSize="20dp"
                         android:textColor="@color/white"
@@ -231,7 +231,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Log Out"
+                        android:text="@string/logout_text"
                         android:fontFamily="@font/poppins"
                         android:textSize="20dp"
                         android:textColor="@color/white"

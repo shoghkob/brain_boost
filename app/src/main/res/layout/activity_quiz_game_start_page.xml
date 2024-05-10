@@ -4,55 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/quiz_game_bg"
-    tools:context=".MainActivity">
+    android:background="@drawable/levels_bg"
+    tools:context=".QuizGameStartPage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
         >
+
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
-            android:paddingLeft="20sp"
-            android:paddingTop="25sp"
-            android:text="Guess the words"
+            android:background="@drawable/levels_text_box"
+            android:paddingTop="80sp"
+            android:text="@string/levels_text"
             android:textAlignment="center"
-            android:gravity="center"
-            android:textColor="#fff"
-            android:textSize="30sp"
+            android:textColor="#F6F5F2"
+            android:textSize="40sp"
             android:textStyle="bold"
             app:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="43dp" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
-            android:text="Have fun!"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:fontFamily="@font/poppins"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            tools:layout_editor_absoluteY="41dp" />
 
         <ImageView
-            android:id="@+id/back_arrow"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="10dp"
-            android:src="@drawable/arrow_back_24px"
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="230dp"
+            android:layout_marginEnd="30dp"
+            android:paddingTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:srcCompat="@drawable/levels_game_img"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="43dp" />
+            tools:layout_editor_absoluteY="0dp" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -60,14 +48,14 @@
             android:layout_height="175dp"
             android:orientation="horizontal"
             android:padding="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="100dp"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            app:layout_constraintTop_toBottomOf="@+id/textView">
             <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
+                android:layout_width="230dp"
                 android:layout_height="142dp"
                 android:layout_marginLeft="15dp"
                 app:cardCornerRadius="20dp">
@@ -78,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:background="#9F70FD">
+                    android:background="#7BC9FF">
 
                     <ImageView
                         android:id="@+id/level1"
@@ -91,18 +79,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Level 1"
-                        android:textSize="20sp"
+                        android:text="@string/level1_text"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
+                android:layout_width="230dp"
                 android:layout_height="142dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="60dp"
                 app:cardCornerRadius="20dp">
 
                 <LinearLayout
@@ -111,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:background="#864AF9">
+                    android:background="#5FBDFF">
 
                     <ImageView
                         android:id="@+id/level2"
@@ -124,9 +111,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Level 2"
+                        android:text="@string/level2_text"
                         android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>
@@ -145,7 +132,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
             <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
+                android:layout_width="230dp"
                 android:layout_height="142dp"
                 android:layout_marginLeft="15dp"
                 app:cardCornerRadius="20dp">
@@ -155,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:background="#7360DF">
+                    android:background="#39B5E0">
 
                     <ImageView
                         android:id="@+id/level3"
@@ -168,18 +155,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Level 3"
+                        android:text="@string/level3_text"
                         android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
+                android:layout_width="230dp"
                 android:layout_height="142dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="60dp"
                 app:cardCornerRadius="20dp">
 
                 <LinearLayout
@@ -187,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:background="#9F70FD">
+                    android:background="#7091F5">
 
                     <ImageView
                         android:id="@+id/level4"
@@ -200,9 +187,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Level 4"
+                        android:text="@string/level4_text"
                         android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>
@@ -221,7 +208,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
             <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
+                android:layout_width="230dp"
                 android:layout_height="142dp"
                 android:layout_marginLeft="15dp"
                 app:cardCornerRadius="20dp">
@@ -231,7 +218,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:background="#7743DB">
+                    android:background="#8696FE">
 
                     <ImageView
                         android:id="@+id/level5"
@@ -244,18 +231,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Level 5"
+                        android:text="@string/level5_text"
                         android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
+                android:layout_width="230dp"
                 android:layout_height="142dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="60dp"
                 app:cardCornerRadius="20dp">
 
                 <LinearLayout
@@ -263,7 +250,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:background="#4D2DB7">
+                    android:background="#6C9BCF">
 
                     <ImageView
                         android:id="@+id/level6"
@@ -276,9 +263,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Level 6"
+                        android:text="@string/level6_text"
                         android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>

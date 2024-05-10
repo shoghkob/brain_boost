@@ -27,7 +27,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:text="@string/login"
                 android:fontFamily="@font/poppins"
                 android:textAlignment="center"
                 android:textColor="@color/lavender"
@@ -43,7 +43,7 @@
                 android:background="@drawable/lavander_border"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
-                android:hint="Email"
+                android:hint="@string/email_text"
                 android:fontFamily="@font/poppins"
                 android:padding="8dp"
                 android:textSize="20dp" />
@@ -56,7 +56,7 @@
                 android:background="@drawable/lavander_border"
                 android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
-                android:hint="Password"
+                android:hint="@string/password_text"
                 android:fontFamily="@font/poppins"
                 android:inputType="textPassword"
                 android:padding="8dp"
@@ -71,7 +71,7 @@
                 android:background="@drawable/lavander_border"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:text="Login"
+                android:text="@string/login"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins"
                 android:textSize="30dp"
@@ -86,7 +86,7 @@
                 android:layout_marginTop="10dp"
                 android:padding="8dp"
                 android:fontFamily="@font/poppins"
-                android:text="Don't have an account? Sign Up"
+                android:text="@string/signup_text"
                 android:textColor="@color/lavender"
                 android:textSize="20dp" />
 
