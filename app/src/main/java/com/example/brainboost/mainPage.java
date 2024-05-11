@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class mainPage extends AppCompatActivity {
 
-    ImageView profile_icon, first_course, second_course, third_course, games, game1, game2, game3, courseIcon;
+    ImageView profile_icon, first_course, second_course, third_course, games, game1, game2, game3, courseIcon, leaderboard_icon;
     TextView seeAll;
 
     @Override

@@ -13,7 +13,7 @@
     // login/register
     <string name="login">Login</string>
     <string name="signup">Sign up</string>
-    <string name="name_text">Sign up</string>
+    <string name="name_text">Name</string>
     <string name="email_text">Email</string>
     <string name="password_text">Password</string>
     <string name="confirm_password_text">Confirm password</string>
@@ -112,10 +112,39 @@
     <string name="lesson9_name">9. What is Generative AI?</string>
     <string name="lesson10_name">10. Search and Control Strategies</string>
 
+    // lesson 1
+
+    <string name="what_is_ai_text">What is AI?</string>
+    <string name="lesson2_subname">Branches of AI</string>
+    <string name="lesson3_subname">What is Natural Language Processing?</string>
+    <string name="lesson4_subname">What are Expert Systems?</string>
+    <string name="lesson5_subname">What is Fuzzy Logic?</string>
+
+    <string name="what_is_ai">Artificial Intelligence (AI) is a branch of Science
+        which deals with helping machines find solutions to complex problems in a more human-like
+        fashion. Expert problem solving - restricting domain to allow including significant relevant
+        knowledge.
+    </string>
+    <string name="lesson3_desc">Natural Language Processing (also known as NLP) is a
+        branch of Artificial Intelligence or computer science that uses computer algorithms to
+        enable computer systems to read better and understand human natural language just as much
+        as a human being should.
+    </string>
+    <string name="lesson4_desc">Expert Systems are a branch of Artificial Intelligence that aims to
+        provide users with expert knowledge on a requested topic. The knowledge provided by expert
+        systems is made possible because of accumulated feeds of expert knowledge.
+    </string>
+    <string name="lesson5_desc">Fuzzy Logic is a branch of Artificial Intelligence that functions by imitating human
+        thought logically to find answers to deep questions.Unlike standard logic, which narrows all answers
+        to a wholly TRUE or FALSE concept.
+    </string>
+    <string name="lesson2_desc">1. Game Playing, 2. 2. Speech Recognition, 3. .Understanding Natural Language, 4. Computer Vision, 5.Expert Systems, 6.Heuristic Classification, </string>
     <string-array name="language_options">
         <item>English</item>
         <item>Русский</item>
         <item>Հայերեն</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
