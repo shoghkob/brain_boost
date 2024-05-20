@@ -112,6 +112,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/second_lesson"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     app:cardCornerRadius="20dp"
@@ -155,6 +156,7 @@
                     app:cardCornerRadius="20dp">
 
                     <LinearLayout
+                        android:id="@+id/third_lesson"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -184,6 +186,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/forth_lesson"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     app:cardCornerRadius="20dp"
@@ -219,6 +222,7 @@
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/fifth_lesson"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     app:cardCornerRadius="20dp"
@@ -253,6 +257,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/sixth_lesson"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     app:cardCornerRadius="20dp"
@@ -287,6 +292,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/seventh_lesson"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     app:cardCornerRadius="20dp"
@@ -328,6 +334,7 @@
                     android:backgroundTint="#E493B3">
 
                     <LinearLayout
+                        android:id="@+id/eight_lesson"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -355,6 +362,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/ninth_lesson"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     app:cardCornerRadius="20dp"
@@ -389,6 +397,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/tenth_lesson"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     app:cardCornerRadius="20dp"

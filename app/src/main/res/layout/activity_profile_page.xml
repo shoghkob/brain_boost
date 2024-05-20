@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Username"
+                android:text="Samsung"
                 android:fontFamily="@font/poppins"
                 android:textColor="@color/white"
                 android:textSize="35dp"
@@ -64,55 +64,11 @@
                 android:id="@+id/userEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="user email"
+                android:text="sictst1@gmail.com"
                 android:textColor="#CCFFFFFF"
                 android:textSize="30dp"
                 android:layout_gravity="center" />
 
-            <LinearLayout
-                android:id="@+id/progress_layout"
-                android:background="@drawable/round_back_white10_20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="50dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-                <!-- Progress -->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/progressIcon"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/baseline_analytics_24"
-                        android:background="@drawable/round_back_private_account"
-                        android:padding="12dp"
-                        android:onClick="showLanguageDialog" />
-
-                    <TextView
-                        android:layout_marginStart="20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="@string/progress_text"
-                        android:fontFamily="@font/poppins"
-                        android:textSize="20dp"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/progressIcon" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/chevron_right_24px"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"/>
-                </RelativeLayout>
-            </LinearLayout>
             <LinearLayout
                 android:id="@+id/languages_layout"
                 android:background="@drawable/round_back_white10_20"
@@ -120,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="100dp"
                 android:orientation="vertical"
                 android:padding="15dp">
                 <!-- Languages -->
@@ -148,48 +104,6 @@
                         android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/languagesIcon" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/chevron_right_24px"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"/>
-                </RelativeLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:background="@drawable/round_back_white10_20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-                <!--About Us-->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/aboutUsIcon"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/info_24px"
-                        android:background="@drawable/round_back_security"
-                        android:padding="12dp" />
-
-                    <TextView
-                        android:layout_marginStart="20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="@string/about_text"
-                        android:fontFamily="@font/poppins"
-                        android:textSize="20dp"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/aboutUsIcon" />
 
                     <ImageView
                         android:layout_width="wrap_content"

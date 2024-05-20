@@ -56,8 +56,8 @@ public class profilePage extends AppCompatActivity {
         languagesLayout = findViewById(R.id.languages_layout);
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString("userName", "");
-        String userEmail = preferences.getString("userEmail", "");
+        String userName = preferences.getString("userName", "Samsung");
+        String userEmail = preferences.getString("userEmail", "sictst1@gmail.com");
 
         nameTextView.setText(userName);
         emailTextView.setText(userEmail);

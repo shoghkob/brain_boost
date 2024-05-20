@@ -16,16 +16,27 @@ public class FirstLessonQuiz extends AppCompatActivity {
     private TextView option2TextView;
     private TextView option3TextView;
     private TextView option4TextView;
+    private TextView quitButton;
+    private TextView nextButton;
 
     // Variables for quiz logic
     private int currentQuestionIndex = 0;
     private int score = 0;
-    private String[] questions = {"Who invented Android Studio?", "What is the capital of France?"};
-    private String[][] options = {
-            {"James Gosling", "Sergey Brin", "Larry Page", "JetBrains"},
-            {"London", "Berlin", "Paris", "Rome"}
+    private String[] questions = {
+            "What is AI?",
+            "Which of this is not the branch of AI?",
+            "What is NLP using?",
+            "What are Expert Systems doing?",
+            "How does Fuzzy logic work?"
     };
-    private int[] correctAnswerIndices = {3, 2}; // Correct answer indices for each question
+    private String[][] options = {
+            {"Advanced Internet", "Artificial Invention", "Automated Intelligence", "Artificial Intelligence"},
+            {"Game playing", "Computer vision", "Expert systems", "Video editing"},
+            {"Algorithms", "Formulas", "AI", "Machines"},
+            {"Generating insights", "Automating tasks", "Providing expert knowledge", "Processing data"},
+            {"Crunching numbers", "Simplifying complex problems", "Randomizing outcomes", "Logical imitation"},
+    };
+    private int[] correctAnswerIndices = {3, 3, 0, 2, 3};
     private boolean userAnswered = false;
 
     @Override
@@ -33,7 +44,6 @@ public class FirstLessonQuiz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_lesson_quiz);
 
-        // Initialize your Views
         timerTextView = findViewById(R.id.timer);
         questionCounterTextView = findViewById(R.id.questionCounter);
         questionTextView = findViewById(R.id.question);
@@ -41,16 +51,31 @@ public class FirstLessonQuiz extends AppCompatActivity {
         option2TextView = findViewById(R.id.option_2);
         option3TextView = findViewById(R.id.option_3);
         option4TextView = findViewById(R.id.option_4);
+        quitButton = findViewById(R.id.textView7);
+        nextButton = findViewById(R.id.textView8);
 
-        // Set up the quiz
         setUpQuiz();
+
+        quitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                quitQuiz();
+            }
+        });
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (userAnswered) {
+                    loadNextQuestion();
+                }
+            }
+        });
     }
 
     private void setUpQuiz() {
-        // Set initial question and options
         displayQuestion();
 
-        // Set onClick listeners for options
         option1TextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,97 +100,105 @@ public class FirstLessonQuiz extends AppCompatActivity {
                 checkAnswer(3);
             }
         });
-
-        // Reset userAnswered for each new question
-        userAnswered = false;
     }
 
     private void displayQuestion() {
-        // Reset all answer backgrounds to default
         option1TextView.setBackgroundResource(R.drawable.option_unselected);
         option2TextView.setBackgroundResource(R.drawable.option_unselected);
         option3TextView.setBackgroundResource(R.drawable.option_unselected);
         option4TextView.setBackgroundResource(R.drawable.option_unselected);
 
-        // Display current question and options
         questionTextView.setText(questions[currentQuestionIndex]);
         option1TextView.setText(options[currentQuestionIndex][0]);
         option2TextView.setText(options[currentQuestionIndex][1]);
         option3TextView.setText(options[currentQuestionIndex][2]);
         option4TextView.setText(options[currentQuestionIndex][3]);
 
-        // Update question counter
         questionCounterTextView.setText((currentQuestionIndex + 1) + "/" + questions.length);
+
+        userAnswered = false;
     }
 
     private void checkAnswer(int selectedOptionIndex) {
         if (userAnswered) {
-            // If the user has already answered, do nothing
             return;
         }
 
         int correctAnswerIndex = correctAnswerIndices[currentQuestionIndex];
 
-        // Reset all answer backgrounds to default
-        option1TextView.setBackgroundResource(R.drawable.option_unselected);
-        option2TextView.setBackgroundResource(R.drawable.option_unselected);
-        option3TextView.setBackgroundResource(R.drawable.option_unselected);
-        option4TextView.setBackgroundResource(R.drawable.option_unselected);
+        if (selectedOptionIndex == correctAnswerIndex) {
+            score++;
+            switch (selectedOptionIndex) {
+                case 0:
+                    option1TextView.setBackgroundResource(R.drawable.button_2);
+                    break;
+                case 1:
+                    option2TextView.setBackgroundResource(R.drawable.button_2);
+                    break;
+                case 2:
+                    option3TextView.setBackgroundResource(R.drawable.button_2);
+                    break;
+                case 3:
+                    option4TextView.setBackgroundResource(R.drawable.button_2);
+                    break;
+            }
+        } else {
+            // Wrong answer
+            switch (selectedOptionIndex) {
+                case 0:
+                    option1TextView.setBackgroundResource(R.drawable.button_1);
+                    break;
+                case 1:
+                    option2TextView.setBackgroundResource(R.drawable.button_1);
+                    break;
+                case 2:
+                    option3TextView.setBackgroundResource(R.drawable.button_1);
+                    break;
+                case 3:
+                    option4TextView.setBackgroundResource(R.drawable.button_1);
+                    break;
+            }
 
-        // Reset background of second answer choice if first choice is selected
-        if (selectedOptionIndex == 0) {
-            option2TextView.setBackgroundResource(R.drawable.option_unselected);
-            option3TextView.setBackgroundResource(R.drawable.option_unselected);
-            option4TextView.setBackgroundResource(R.drawable.option_unselected);
-        }
-
-        // Set background of selected answer choice
-        switch (selectedOptionIndex) {
-            case 0:
-                option1TextView.setBackgroundResource(selectedOptionIndex == correctAnswerIndex ? R.drawable.button_2 : R.drawable.button_1);
-                break;
-            case 1:
-                option2TextView.setBackgroundResource(selectedOptionIndex == correctAnswerIndex ? R.drawable.button_2 : R.drawable.button_1);
-                break;
-            case 2:
-                option3TextView.setBackgroundResource(selectedOptionIndex == correctAnswerIndex ? R.drawable.button_2 : R.drawable.button_1);
-                break;
-            case 3:
-                option4TextView.setBackgroundResource(selectedOptionIndex == correctAnswerIndex ? R.drawable.button_2 : R.drawable.button_1);
-                break;
-        }
-
-        // Change background of correct answer to button_2.xml
-        switch (correctAnswerIndex) {
-            case 0:
-                option1TextView.setBackgroundResource(R.drawable.button_2);
-                break;
-            case 1:
-                option2TextView.setBackgroundResource(R.drawable.button_2);
-                break;
-            case 2:
-                option3TextView.setBackgroundResource(R.drawable.button_2);
-                break;
-            case 3:
-                option4TextView.setBackgroundResource(R.drawable.button_2);
-                break;
+            // Highlight correct answer
+            switch (correctAnswerIndex) {
+                case 0:
+                    option1TextView.setBackgroundResource(R.drawable.button_2);
+                    break;
+                case 1:
+                    option2TextView.setBackgroundResource(R.drawable.button_2);
+                    break;
+                case 2:
+                    option3TextView.setBackgroundResource(R.drawable.button_2);
+                    break;
+                case 3:
+                    option4TextView.setBackgroundResource(R.drawable.button_2);
+                    break;
+            }
         }
 
         userAnswered = true;
+    }
 
-        // Move to the next question or finish the quiz
+    private void loadNextQuestion() {
         if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
-            // Reset userAnswered for each new question
-            userAnswered = false;
             displayQuestion();
         } else {
-            // Finish the quiz
             finishQuiz();
         }
     }
 
+    private void quitQuiz() {
+        Intent intent = new Intent(FirstLessonQuiz.this, mainPage.class);
+        startActivity(intent);
+        finish();
+    }
+
     private void finishQuiz() {
-        startActivity(new Intent(FirstLessonQuiz.this, QuizResult.class));
+        Intent intent = new Intent(FirstLessonQuiz.this, QuizResult.class);
+        intent.putExtra("SCORE", score);
+        intent.putExtra("TOTAL_QUESTIONS", questions.length);
+        startActivity(intent);
+        finish();
     }
 }

@@ -15,8 +15,9 @@ public class start_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        Button start_btn;
+        Button start_btn, test_mode_btn;
         start_btn = findViewById(R.id.start_btn);
+        test_mode_btn = findViewById(R.id.test_mode_btn);
         start_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,6 +26,12 @@ public class start_activity extends AppCompatActivity {
                 } else {
                     startActivity(new Intent(start_activity.this, loginActivity.class));
                 }
+            }
+        });
+        test_mode_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(start_activity.this, onboarding.class));
             }
         });
     }

@@ -11,11 +11,11 @@
         android:id="@+id/imageView6"
         android:layout_width="500dp"
         android:layout_height="500dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_trophy"
+        app:srcCompat="@drawable/congrats_img"
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
@@ -57,61 +57,33 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins"
-        android:text="EARNED COINS"
-        android:textColor="@android:color/black"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="@+id/score"
-        app:layout_constraintStart_toStartOf="@+id/score"
-        app:layout_constraintTop_toBottomOf="@+id/score" />
-
-    <TextView
-        android:id="@+id/earnedCoins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_dollar"
-        android:drawablePadding="10dp"
-        android:fontFamily="@font/poppins"
-        android:text="500"
-        android:textColor="@android:color/black"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView13"
-        app:layout_constraintStart_toStartOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-    <TextView
         android:id="@+id/shareBtn"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/button1"
         android:fontFamily="@font/poppins"
+        android:layout_marginStart="20dp"
         android:gravity="center"
         android:text="Quit"
         android:textColor="@color/color_white"
         android:textSize="40dp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/restartBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/restartBtn"
-        app:layout_constraintTop_toBottomOf="@+id/earnedCoins" />
+        app:layout_constraintTop_toBottomOf="@+id/score" />
 
     <TextView
         android:id="@+id/restartBtn"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="64dp"
         android:background="@drawable/button_2"
         android:fontFamily="@font/poppins"
         android:gravity="center"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
         android:text="Restart"
         android:textColor="@color/color_white"
         android:textSize="40dp"
@@ -119,5 +91,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/shareBtn"
-        app:layout_constraintTop_toBottomOf="@+id/earnedCoins" />
+        app:layout_constraintTop_toBottomOf="@+id/score" />
 </androidx.constraintlayout.widget.ConstraintLayout>
